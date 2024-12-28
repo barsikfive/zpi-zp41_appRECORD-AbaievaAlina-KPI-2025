@@ -162,6 +162,10 @@
                 color: white;
             }
 
+            main img {
+                margin: 10px;
+            }
+
     /* LAB SELECTION */
 
             nav.labselection {
@@ -2650,6 +2654,119 @@ footer {
                         <li>Нестабільність у великих проєктах: Для великих макетів Flexbox може стати заплутаним, оскільки все залежить від налаштувань контейнера.</li>
                         <li>Flexbox ідеально підходить для створення адаптивних і простих макетів, але для складніших випадків краще комбінувати його з Grid.</li>
                     </ul>
+                </div>
+            </section>
+
+            <section class="labcontent" id="lab2-2">
+                <nav class="labmenu">
+                    <ul>
+                        <li onclick="toggleContent('l2_2-menu1', this)">
+                            Тема, мета, репозиторії</li>
+                        <li onclick="toggleContent('l2_2-menu2', this)">
+                            Десктопна версія
+                        </li>
+                            <ul class="labsubmenu">
+                                <li onclick="toggleContent('l2_2-menu3', this)">Адаптація дизайну №1</li>
+                                <li onclick="toggleContent('l2_2-menu4', this)">Адаптація дизайну №2</li>
+                                <li onclick="toggleContent('l2_2-menu5', this)">Брейкпоінт №1</li>
+                                <li onclick="toggleContent('l2_2-menu6', this)">Брейкпоінт №2</li>
+                            </ul>
+                        <li onclick="toggleContent('l2_2-menu7', this)">
+                            Мобільна версія
+                        </li>
+                        <li onclick="toggleContent('l2_2-menu8', this)">
+                            ВИСНОВКИ
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="content-box" id="l2_2-menu1">
+                    <h1>
+                        Лабораторна робота №2.2
+                    </h1>
+                    <h2>
+                        Тема
+                    </h2>
+                    <p>
+                        Адаптивна верстка. Медіа-запити. Метатег viewport.
+                    </p>
+                    <h2>
+                        Мета
+                    </h2>
+                    <p>
+                        Адаптивна верстка. Медіа-запити. Медіа-типи. Медіа-функції. Метатег viewport. Інструменти розробника. Стратегія Mobile First.
+                    </p>
+                    <h2>
+                        Посилання
+                    </h2>
+                    <h3>
+                        Власний WEB-застосунок
+                    </h3>
+                    <p>
+                        <a target="_blank" href="https://github.com/barsikfive/zpi-zp41_appWEB-AbaievaAlina-KPI-2025">Репозиторій</a><br>
+                        <a target="_blank" href="https://barsikfive.github.io/zpi-zp41_appWEB-AbaievaAlina-KPI-2025/">Жива сторінка</a>
+                    </p>
+                    <h3>
+                        Звітний HTML-документ
+                    </h3>
+                    <p>
+                        <a target="_blank" href="https://github.com/barsikfive/zpi-zp41_appRECORD-AbaievaAlina-KPI-2025">Репозиторій</a><br>
+                        <a target="_blank" href="https://barsikfive.github.io/zpi-zp41_appRECORD-AbaievaAlina-KPI-2025/">Жива сторінка</a>
+                    </p>
+                    <h3>
+                        Самостійні роботи
+                    </h3>
+                    <p>
+                        <a target="_blank" href="https://github.com/barsikfive/zpi-zp41_appINDEPENDENT-AbaievaAlina-KPI-2025">Репозиторій</a><br>
+                        <a target="_blank" href="https://barsikfive.github.io/zpi-zp41_appINDEPENDENT-AbaievaAlina-KPI-2025/">Жива сторінка</a>
+                    </p>
+                </div>
+
+                <div class="content-box" id="l2_2-menu2">
+                    <h1>Стандартний вигляд сторінки на широкому екрані</h1>
+                    <img src="images/resp-1.png" style="max-width:100%; max-height:500px"></img>
+                </div>
+
+                <div class="content-box" id="l2_2-menu3">
+                    <h1>При звуженні вікна браузера адаптується перелік продуктів</h1>
+                    <img src="images/resp-2.png" style="max-width:100%; max-height:500px"></img>
+                </div>
+
+                <div class="content-box" id="l2_2-menu4">
+                    <h1>Більше звуження потребує зміни вигляду меню</h1>
+                    <img src="images/resp-3.png" style="max-width:100%; max-height:500px"></img>
+                </div>
+
+                <div class="content-box" id="l2_2-menu5">
+                    <h1>При звуженні до <span>980 пікселів</span> в ширину - зменшується розмір шрифту логотипа</h1>
+                    <img src="images/resp-4.png" style="max-width:100%; max-height:500px"></img>
+                </div>
+                
+                <div class="content-box" id="l2_2-menu6">
+                    <h1>При звуженні до <span>550 пікселів</span> в ширину - від логотипу залишається лише картинка</h1>
+                    <img src="images/resp-5.png" style="max-width:100%; max-height:500px"></img>
+                </div>
+                
+                <div class="content-box" id="l2_2-menu7">
+                    <h1>При перегляді на мобільному пристрої дизайн зберігає абсолютно всі елементи</h1>
+                    <img src="images/resp-6.jpg" style="max-width:50%; max-height:500px; float:left;"></img><img src="images/resp-7.jpg" style="max-width:50%; max-height:500px"></img>
+                </div>
+
+                <div class="content-box" id="l2_2-menu8">
+                    <h1>Адаптивна верстка</h1>
+                    <p>Адаптивна верстка — це підхід до створення веб-сайтів, які автоматично підлаштовуються під різні розміри екранів. Завдяки цьому сайти коректно відображаються як на десктопах, так і на планшетах чи смартфонах. Основна мета — забезпечити комфортний користувацький досвід незалежно від пристрою.</p>
+                    <h1>Медіа-запити</h1>
+                    <p>Медіа-запити — це CSS-інструмент, який дозволяє змінювати стилі залежно від властивостей пристрою (розмір екрану, орієнтація тощо). Наприклад, за допомогою медіа-запитів можна задавати різні макети для мобільних і десктопних версій сайту. Вони є основою адаптивного дизайну.</p>
+                    <h1>Медіа-типи</h1>
+                    <p>Медіа-типи визначають, до яких пристроїв застосовуються стилі, наприклад: screen для екранів, print для друку чи speech для синтезу голосу. Це дозволяє застосовувати специфічні стилі для різних типів пристроїв, оптимізуючи їхній вигляд і функціональність.</p>
+                    <h1>Медіа-функції</h1>
+                    <p>Медіа-функції — це частина медіа-запитів, яка дозволяє задавати конкретні умови, такі як min-width, max-width, orientation, чи aspect-ratio. Вони надають більше гнучкості в адаптації стилів під специфічні характеристики пристрою.</p>
+                    <h1>Метатег viewport</h1>
+                    <p>Метатег &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt; задає параметри масштабу та розміру сторінки для мобільних пристроїв. Без цього тегу сайт на смартфонах відображатиметься неправильно, оскільки браузери за замовчуванням масштабують сторінки під стандартну ширину в 980px.</p>
+                    <h1>Інструменти розробника</h1>
+                    <p>Інструменти розробника (наприклад, DevTools у браузерах) допомагають тестувати адаптивність сторінок. Вони дозволяють емулювати різні розміри екранів, аналізувати медіа-запити, змінювати стилі в реальному часі та знаходити помилки у верстці, що значно полегшує процес розробки.</p>
+                    <h1>Стратегія Mobile First</h1>
+                    <p>Mobile First — це підхід до дизайну, де розробка починається з мобільної версії, а потім поступово додаються стилі для більш широких екранів. Цей підхід враховує зростаюче використання мобільних пристроїв і дозволяє створювати оптимізовані сайти для мобільних користувачів.</p>
                 </div>
             </section>
         </main>
