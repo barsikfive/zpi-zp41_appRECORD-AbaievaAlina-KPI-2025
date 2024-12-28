@@ -249,10 +249,10 @@
             div.content-box {
                 min-width: 500px;
                 width: 60%;
-                min-height: 500px;
-                height: fit-content;
+                height: 550px;
                 margin: 20px;
                 padding: 30px;
+                overflow: auto;
 
                 font-size: 12pt;
                 text-shadow: 0 0 10px #000;
@@ -317,7 +317,7 @@
                         <li onclick="toggleContent('l1_1-menu1', this)">
                             Опис предметного середовища</li>
                         <li onclick="toggleContent('l1_1-menu2', this)">
-                            Тема, мета, репозиторій</li>
+                            Тема, мета, репозиторії</li>
                         <li onclick="toggleContent('l1_1-menu3', this)">
                             Структура документа
                         </li>
@@ -353,7 +353,7 @@
                         Сценарій використання сайту
                     </h2>
                     <ul style="list-style: decimal; margin: 0;">
-                        <li>Перегляд крамниці з обраними та рекомендованими продуктами.</li>
+                        <li>Вибір сторінок  з обраними та рекомендованими продуктами.</li>
                         <li>Пошук відеоігор за жанрами.</li>
                         <li>Обрання продукту та перегляд детальної інформації.</li>
                     </ul>
@@ -391,7 +391,7 @@
                     </h3>
                     <p>
                         <a target="_blank" href="https://github.com/barsikfive/zpi-zp41_appRECORD-AbaievaAlina-KPI-2025">Репозиторій</a><br>
-                        <a target="_blank" href="">Жива сторінка</a>
+                        <a target="_blank" href="https://barsikfive.github.io/zpi-zp41_appRECORD-AbaievaAlina-KPI-2025/">Жива сторінка</a>
                     </p>
                     <h3>
                         Самостійні роботи
@@ -404,9 +404,592 @@
 
                 <div class="content-box" id="l1_1-menu3">
                     <h1>
-                        Головна сторіка WEB-застосунку
+                        Головна сторінка WEB-застосунку
                     </h1>
-                    <pre>
+                    <h2>HTML-код</h2>
+                    <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uk&quot;&gt;
+    &lt;head&gt;
+        &lt;title&gt;HONEY BADGER - Крамниця&lt;/title&gt;
+        &lt;link rel=&quot;icon&quot; type=&quot;image/x-icon&quot; href=&quot;images/favicon.ico&quot;&gt;
+        &lt;style type=&quot;text/css&quot; media=&quot;screen&quot;&gt;
+            @font-face {
+                font-family: &quot;Motiva Sans&quot;;
+                src: url('fonts/MotivaSans-Regular.otf') format(&quot;opentype&quot;);
+            }
+
+            @font-face {
+                font-family: &quot;Manrope&quot;;
+                src: url('fonts/Manrope-Regular.ttf') format(&quot;truetype&quot;);
+            }
+
+            @font-face {
+                font-family: &quot;Koulen&quot;;
+                src: url('fonts/Koulen-Regular.ttf') format(&quot;truetype&quot;);
+            }
+
+            * {
+                scrollbar-color: #205DA580 #181A21;
+                scrollbar-width: thin;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                display: block;
+                position: relative;
+                
+                background-color: #1E2737;
+
+                font-family: &quot;Motiva Sans&quot;, sans-serif;
+                font-size: 20pt;
+                color: #D8DDD3;
+            }
+
+            header {
+                width: 100%;
+                height: fit-content;
+
+                background-color: #181A21;
+            }
+
+            header section {
+                margin: 0 auto;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0;
+                width: 100%;
+                min-height: 110px;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+
+            div.logo {
+                display: flex;
+                height: 100px;
+                width: 550px;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .logo img {
+                width: 100px;
+                height: 100px;
+            }
+
+            .logo h1 {
+                margin-left: 10px;
+                width: fit-content;
+                word-break: keep-all;
+
+                font-family: &quot;Koulen&quot;;
+                font-size: 64pt;
+                color: #C5C3C1;
+            }
+
+            header nav {
+                margin: 10px 40px;
+                font-family: &quot;Manrope&quot;;
+                font-weight: bold;
+                color: #D8DDD3;
+            }
+
+            header nav ul {                
+                list-style: none;
+
+                margin: 0;
+                padding: 0;
+
+                display: flex;
+                gap: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+            }
+
+            header nav li {
+                width: fit-content;
+                height: fit-content;
+                text-align: center;
+            }
+
+            header nav a {
+                text-decoration: none;
+                color: inherit;
+                transition: color 300ms;
+            }
+
+            header nav a:hover {
+                color: #fff;
+            }
+
+            
+            .activepage {
+                color: #539BFB;
+            }
+
+            .activepage a:hover {
+                color: inherit;
+            }
+            
+            .activepage a::after {
+                content: &quot;&quot;;
+                margin: 0;
+                display: block;
+                width: 100%;
+                height: 2px;
+                background: #539BFB;
+                border-radius: 3px;
+                animation: slide-in 100ms;
+            }
+
+            .menutooltip::after {
+                content: attr(tooltip-content);
+                opacity: 0;
+                visibility: hidden;
+                
+                display: block;
+                position: absolute;
+                width: 140px;
+                padding: 3px 10px;
+
+                transition: all 200ms 300ms;
+
+                font-size: 14px;
+                text-align: left;
+                background: #3f4450;
+                box-shadow: 2px 5px 5px #00000033;
+            }
+
+            .menutooltip:hover::after {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            /* Hide part of the logo on smaller screen */
+            @media screen and (max-width: 980px)
+            {
+                .logo h1 {
+                    font-size: 56pt;
+                }
+
+                header nav {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+            }
+
+            @media screen and (max-width: 550px)
+            {
+                .logo h1 {
+                    display: none;
+                }
+            }
+
+            main {
+                overflow: hidden;
+
+                margin: 0px auto;
+                width: 100%;
+
+                font-family: &quot;Motiva Sans&quot;;
+                font-size: 20pt;
+
+                box-shadow: 0 -60px 300px inset #000;
+            }
+
+            main section {
+                overflow: unset;
+                margin: 40px auto;
+                min-width: 450px;
+                width: 70%;
+            }
+
+            main section hgroup {
+                margin: 0;
+                padding: 0px 20px 10px 20px;
+
+                text-shadow: 0 0 5px #000;
+            }
+
+            main section hgroup h2 {
+                margin: 0;
+            }
+
+            main section hgroup p {
+                margin: 0;
+                font-size: 20pt;
+            }
+
+            #featured h2 {
+                font-size: 40pt;
+            }
+
+            #onsale h2 {
+                font-size: 36pt;
+                text-shadow: 0 0 5px #000, #CD62FF66 -1px 1px, #44ABEB4D -3px 3px, #CD62FF33 -5px 5px, #44ABEB1A -7px 7px, #CD62FF0D -9px 9px
+            }
+
+            #topsellers h2 {
+                font-size: 24pt;
+            }
+            
+            section#featured {
+                background-image: linear-gradient(90deg, #205DA580, #205DA580, #205DA580, #FFF60033, #FFF60066, #FFF60033, #205DA580, #205DA580, #205DA580);
+                background-size: 1000% 100%;
+                animation-name: background-shift;
+                animation-duration: 20s;
+                animation-iteration-count: infinite;
+                animation-direction: running;
+            }
+            
+            @keyframes background-shift {
+                0% { background-position: 100% 100%; box-shadow: 0 0 80px #205DA5, 0 0 30px #44ABEB; }
+                25% { background-position: 85% 85%; box-shadow: 0 0 80px #44ABEB, 0 0 30px #205DA580; }
+                48% { background-position: 70% 70%; box-shadow: 0 0 80px #FFF60066, 0 0 30px #44ABEB; }
+                50% { background-position: 50% 50%; box-shadow: 0 0 80px #FFF600cc, 0 0 30px #FFF600; }
+                52% { background-position: 30% 30%; box-shadow: 0 0 80px #44ABEB, 0 0 30px #FFF600cc; }
+                85% { background-position: 15% 15%; box-shadow: 0 0 80px #44ABEB, 0 0 30px #44ABEB; }
+                100% { background-position: 0% 0%; box-shadow: 0 0 80px #205DA5, 0 0 30px #44ABEB; }
+            }
+
+            .showcase {
+                padding: 20px 10px;
+                border-radius: 5px;
+                
+                background-color: #205DA580;
+            }
+            
+            #onsale div.showcase {
+                margin-bottom: 70px;
+                box-shadow: #CD62FF66 -10px 10px, #44ABEB4D -20px 20px, #CD62FF33 -30px 30px, #44ABEB1A -40px 40px, #CD62FF0D -50px 50px;
+            }
+
+            #topsellers div.showcase {
+                box-shadow: 0 0 0 2px #44ABEB, -8px 8px 0 0 #44ABEB;
+            }
+            
+            div.gamebanners {
+                display: flex;
+                flex-wrap: wrap;
+                min-width: 150px;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .gamebanners img {
+                display: block;
+                margin: 20px auto;
+                box-shadow: 0 0 10px #000;
+                transition: all 1s;
+            }
+
+            @media screen and (max-width: 1740px) {
+                .gamebanners img {
+                    margin: 10px 10px;
+                }
+            }
+            
+            .gamebanners img:hover {
+                box-shadow: 0 0 10px 5px #000;
+                position: relative;
+                z-index: 1500;
+                scale: 110%;
+            }
+            
+            #featured .banner img {
+                height: 180px;
+                width: 385px;
+            }
+            
+            #onsale .poster img {
+                height: 500px;
+                width: 333px;
+            }
+            
+            #topsellers .banner img
+            {
+                height: 135px;
+                width: 299px;
+            }
+
+            main aside {
+                margin: 40px auto;
+                min-width: 450px;
+                width: 30%;
+                height: fit-content;
+                font-family: &quot;Manrope&quot;;
+                font-size: 12pt;
+            }
+
+            main aside table {
+                vertical-align: center;
+                min-width: 450px;
+                width: fit-content;
+            }
+
+            main aside caption {
+                caption-side: top;
+                padding: 4px;
+                font-weight: bold;
+            }
+
+            main aside thead, tfoot {
+                background-color: #00000033;
+            }
+
+            main aside th, main aside td {
+                padding: 4px;
+                border: 1px solid #fff00033;
+                border-radius: 4px;
+                box-shadow: 0 0 10px #fff00033;
+                height: fit-content;
+            }
+
+            main aside td:first-of-type {
+                text-align: right;
+            }
+
+            main aside tbody &gt; tr:nth-of-type(even) {
+                background-color: #ffffff33;
+            }
+            
+            main aside thead tr {
+                text-align: center;
+            }
+
+            main aside tfoot th {
+                margin: auto;
+                text-align: center;
+            }
+
+            input,
+            select,
+            textarea {
+                font-family: inherit;
+                font-size: 100%;
+                width: 100%;
+                height:20px;
+                padding: 8px;
+                margin: 0;
+                box-sizing: border-box;
+                background-color: #181A21;
+                color:#fff;
+                border: solid 1px #205DA533;
+                border-radius: 4px;
+            }
+            
+            input:hover, input:focus {
+                background-color: #1E2737;
+                color: #fff;
+                border-color: #205DA533;
+                outline: none;
+            }
+
+            input.submitbutton {
+                width: fit-content;
+                height:fit-content;
+                background-color: #1E2737;
+                color: #fff;
+                border-color: #205DA533;
+            }
+
+            input.submitbutton:hover, input.submitbutton:focus {
+                background-color: #205DA566;
+                color: #fff;
+                box-shadow: inset 0 -5 10px #fff00066;
+            }
+
+            footer {
+                margin: 0;
+                width: 100%;
+                height: 100%;
+                font-size: 10pt;
+                font-family: &quot;Manrope&quot;;
+                color: D8DDD3;
+
+                background-color: #181A21;
+            }
+
+            footer section {
+                margin: 0;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0;
+                min-width: 300px;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+
+            div.note {
+                margin: 0 auto;
+                padding: 20px 40px;
+                min-width: 300px;
+                margin: 0;
+            }
+
+            .note h3 {
+                margin: 0;
+            }
+
+            .note p {
+                margin: 0;
+            }
+
+            div.minilogo {
+                margin: 0 auto;
+                width: 110px;
+            }
+
+            .minilogo img {
+                display: block;
+                width: 100px;
+                height: 100px;
+                transform: scaleX(-1);
+            }
+
+            ol.listlang {                
+                list-style: decimal;
+                list-style-position: inside;
+
+                margin: 5px;
+                padding: 0;
+
+                display: block;
+            }
+
+            ul.listpurposes {
+                list-style: circle;
+                list-style-position: outside;
+
+                margin: 5px;
+                padding: 0;
+
+                display: block;
+            }
+
+            footer li {
+                width: fit-content;
+                height: fit-content;
+                text-align: left;
+            }
+            
+        &lt;/style&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+
+        &lt;header&gt;
+            &lt;section&gt;
+                &lt;div class=&quot;logo&quot;&gt;
+                    &lt;img src=&quot;images/HoneyBadgerLogo_Gray.png&quot; alt=&quot;Honey Badger Logo&quot;&gt;&lt;/img&gt;
+                    &lt;h1&gt;HONEY BADGER&lt;/h1&gt;
+                &lt;/div&gt;
+                &lt;nav&gt;
+                    &lt;ul&gt;
+                        &lt;li class=&quot;activepage&quot;&gt;&lt;a href=&quot;index.html&quot;&gt;КРАМНИЦЯ&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;description.html&quot;&gt;КАТЕГОРІЇ&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;description.html&quot;&gt;СПІЛЬНОТА&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a class=&quot;menutooltip&quot; tooltip-content=&quot;Опис предметної галузі та бізнес-логіки&quot; href=&quot;description.html&quot;&gt;ІНФОРМАЦІЯ&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/nav&gt;
+            &lt;/section&gt;
+        &lt;/header&gt;
+
+        &lt;main&gt;
+            &lt;section class=&quot;showcase&quot; id=&quot;featured&quot;&gt;
+                &lt;hgroup&gt;
+                    &lt;h2&gt;Обране і рекомендоване&lt;/h2&gt;
+                    &lt;p&gt;Найкращі ігри усіх часів на &lt;strong&gt;Ukrainian Game Fest&lt;/strong&gt;&lt;/p&gt;
+                &lt;/hgroup&gt;
+                &lt;div class=&quot;gamebanners banner&quot;&gt;
+                    &lt;img src=&quot;images/gamebanners/banner_MetroExodus.jpg&quot;&gt;&lt;/img&gt;
+                    &lt;img src=&quot;images/gamebanners/banner_Stalker2.jpg&quot;&gt;&lt;/img&gt;
+                    &lt;img src=&quot;images/gamebanners/banner_Cossacks3.jpg&quot;&gt;&lt;/img&gt;
+                &lt;/div&gt;
+            &lt;/section&gt;
+
+            &lt;section id=&quot;onsale&quot;&gt;
+                &lt;hgroup&gt;
+                    &lt;h2&gt;Вибрані мегазнижки&lt;/h2&gt;
+                    &lt;p&gt;Особливо приємні знижки на деякі з улюблених ігор&lt;/p&gt;
+                &lt;/hgroup&gt;
+                &lt;div class=&quot;gamebanners poster showcase&quot;&gt;
+                    &lt;img src=&quot;images/gamebanners/poster_Stellaris.png&quot;&gt;&lt;/img&gt;
+                    &lt;img src=&quot;images/gamebanners/poster_Hogwarts.png&quot;&gt;&lt;/img&gt;
+                    &lt;img src=&quot;images/gamebanners/poster_Titanfall2.png&quot;&gt;&lt;/img&gt;
+                &lt;/div&gt;
+            &lt;/section&gt;
+
+            &lt;section id=&quot;topsellers&quot;&gt;
+                &lt;hgroup&gt;
+                    &lt;h2&gt;ХІТИ ПРОДАЖУ&lt;/h2&gt;
+                &lt;/hgroup&gt;
+                &lt;div class=&quot;gamebanners banner showcase&quot;&gt;
+                    &lt;img src=&quot;images/gamebanners/banner_PathOfExile2.jpg&quot;&gt;&lt;/img&gt;
+                    &lt;img src=&quot;images/gamebanners/banner_EldenRing.png&quot;&gt;&lt;/img&gt;
+                    &lt;img src=&quot;images/gamebanners/banner_BaldursGate3.jpg&quot;&gt;&lt;/img&gt;
+                    &lt;img src=&quot;images/gamebanners/banner_Helldivers2.jpg&quot;&gt;&lt;/img&gt;
+                &lt;/div&gt;
+            &lt;/section&gt;
+
+            &lt;aside&gt;
+                &lt;form action=&quot;&quot; method=&quot;get&quot;&gt;
+                    &lt;table&gt;
+                        &lt;caption&gt;Бажаєте отримувати повідомлення про знижки?&lt;/caption&gt;
+                        &lt;thead&gt;
+                            &lt;tr&gt;
+                                &lt;th scope=&quot;col&quot; colspan=&quot;2&quot;&gt;Підпишіться на розсилку&lt;/th&gt;
+                            &lt;/tr&gt;
+                        &lt;/thead&gt;
+                        &lt;tbody&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;&lt;label for=&quot;Ім'я&quot;&gt;Ім'я: &lt;/label&gt;&lt;/td&gt;
+                                &lt;td&gt;&lt;input type=&quot;text&quot; name=&quot;name&quot; id=&quot;name&quot; required /&gt;&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;&lt;label for=&quot;email&quot;&gt;Email: &lt;/label&gt;&lt;/td&gt;
+                                &lt;td&gt;&lt;input type=&quot;email&quot; name=&quot;email&quot; id=&quot;email&quot; required /&gt;&lt;/td&gt;
+                            &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                        &lt;tfoot&gt;
+                            &lt;tr&gt;
+                                &lt;th colspan=&quot;2&quot;&gt;&lt;input class=&quot;submitbutton&quot; type=&quot;submit&quot; value=&quot;Підписатись на новини&quot; /&gt;&lt;/td&gt;
+                            &lt;/tr&gt;
+                        &lt;/tfoot&gt;
+                    &lt;/table&gt;
+                &lt;/form&gt;
+            &lt;/aside&gt;
+        &lt;/main&gt;
+
+        &lt;footer&gt;
+            &lt;section&gt;
+                &lt;div class=&quot;note&quot;&gt;
+                    &lt;h3&gt;ДИСКЛЕЙМЕР&lt;/h3&gt;
+                    &lt;p&gt;Цей сайт створений з метою навчання та практики мов:&lt;/p&gt;
+                    &lt;ol class=&quot;listlang&quot;&gt;
+                        &lt;li&gt;HTML&lt;/li&gt;
+                        &lt;li&gt;CSS&lt;/li&gt;
+                        &lt;li&gt;JavaScript&lt;/li&gt;
+                    &lt;/ol&gt;
+                    &lt;ul class=&quot;listpurposes&quot;&gt;
+                        &lt;li&gt;Сайт розроблений у якості лабораторної роботи з проєктування WEB-застосувань.&lt;/li&gt;
+                        &lt;li&gt;Він не є справжньою платформою цифрової дистрибуції для продажу і розповсюдження відеоігор.&lt;/li&gt;
+                        &lt;li&gt;Для наповнення сайту використаний доступний у відкритих джерелах контент, який не протребує ліцензії.&lt;/li&gt;
+                        &lt;li&gt;Сайт не використовується для комерційних цілей.&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;div class=&quot;minilogo&quot;&gt;
+                        &lt;img src=&quot;images/HoneyBadgerLogo_Gray.png&quot; alt=&quot;Honey Badger Logo&quot;&gt;&lt;/img&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/section&gt;
+        &lt;/footer&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
                     </pre>
                 </div>
 
