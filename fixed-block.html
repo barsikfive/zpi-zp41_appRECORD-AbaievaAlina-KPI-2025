@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+  <title>Fixed Block</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 800px;
+      height: 600px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-rows: 100px 1fr 100px;
+      grid-template-columns: 200px 1fr 1fr 200px;
+    }
+    .header {
+      background-color: #ffc107;
+      grid-column: 1 / -1;
+    }
+    .footer {
+      background-color: #ffc107;
+      grid-column: 1 / -1;
+    }
+    .sidebar {
+      background-color: #007bff;
+    }
+    .main-content {
+      background-color: #ffffff;
+    }
+    .secondary-content {
+      background-color: #dc3545;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">1</div>
+    <div class="sidebar">2</div>
+    <div class="secondary-content">3</div>
+    <div class="main-content">4</div>
+    <div class="secondary-content">5</div>
+    <div class="footer">6</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+  <title>Fixed Table</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    table {
+      width: 800px;
+      height: 600px;
+      border-collapse: collapse;
+      margin: 0 auto;
+    }
+    td {
+      border: 1px solid #000;
+    }
+    .header {
+      background-color: #ffc107;
+      height: 100px;
+    }
+    .footer {
+      background-color: #ffc107;
+      height: 100px;
+    }
+    .sidebar {
+      background-color: #007bff;
+      width: 200px;
+    }
+    .main-content {
+      background-color: #ffffff;
+    }
+    .secondary-content {
+      background-color: #dc3545;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <td colspan="5" class="header">1</td>
+    </tr>
+    <tr>
+      <td class="sidebar">2</td>
+      <td class="secondary-content">3</td>
+      <td class="main-content">4</td>
+      <td class="secondary-content">5</td>
+    </tr>
+    <tr>
+      <td colspan="5" class="footer">6</td>
+    </tr>
+  </table>
+</body>
+</html>

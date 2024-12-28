@@ -1,0 +1,137 @@
+/* Загальні стилі */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Секція інформації про курс */
+.course-info {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px auto;
+    max-width: 800px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.course-info h1 {
+    color: #ff6f00;
+}
+
+.course-info h2 {
+    color: #333;
+    margin-top: 10px;
+}
+
+.course-info ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.course-info li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Секція випускників */
+.graduates {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+
+.graduate-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* FAQ секція */
+.faq {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.faq-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex: 1 1 calc(45% - 10px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Футер */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.enroll {
+    background-color: #ff6f00;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.enroll:hover {
+    background-color: #e65c00;
+}
