@@ -25,6 +25,28 @@
                     clickedItem.classList.add("activesubmenu");
                 }
             }
+
+            function toggleLab(targetID, clickedItem)
+            {
+                const contentBoxes = document.querySelectorAll("section.labcontent");
+                contentBoxes.forEach(box => {
+                    box.style.display = "none";
+                })
+
+                const targetBox = document.getElementById(targetID);
+                if (targetBox) {
+                    targetBox.style.display = "flex";
+                }
+
+                const currentActive = document.getElementsByClassName("activepage")[0];
+                if (currentActive) {
+                    currentActive.classList.remove("activepage");
+                }
+
+                if (clickedItem) {
+                    clickedItem.classList.add("activepage");
+                }
+            }
         </script>          
         <style type="text/css" media="screen">
 
@@ -193,10 +215,14 @@
                 margin: 0 auto;
                 padding: 10px;
 
-                display: flex;
+                display: none;
                 flex-wrap: wrap;
                 justify-content: center;
                 align-items: start;
+            }
+
+            section#lab1-1 {
+                display: flex;
             }
 
             nav.labmenu {
@@ -294,7 +320,7 @@
 
             <section>
                     <div>
-                        <img src="images/gamebanners/banner_Helldivers2.jpg" alt="Фото"></img>
+                        <img src="images/placeholderpic.png" alt="Фото"></img>
                     </div>
             </section>
         </header>
@@ -302,12 +328,12 @@
         <main>
             <nav class="labselection">
                 <ul>
-                    <li class="activepage">Лабораторна робота №1.1</li>
-                    <li>Лабораторна робота №1.2</li>
-                    <li>Лабораторна робота №2.1</li>
-                    <li>Лабораторна робота №2.2</li>
-                    <li>Лабораторна робота №3.1</li>
-                    <li>Лабораторна робота №3.2</li>
+                    <li class="activepage" onclick="toggleLab('lab1-1', this)">Лабораторна робота №1.1</li>
+                    <li onclick="toggleLab('lab1-2', this)">Лабораторна робота №1.2</li>
+                    <li onclick="toggleLab('lab2-1', this)">Лабораторна робота №2.1</li>
+                    <li onclick="toggleLab('lab2-2', this)">Лабораторна робота №2.2</li>
+                    <li onclick="toggleLab('lab3-1', this)">Лабораторна робота №3.1</li>
+                    <li onclick="toggleLab('lab3-2', this)">Лабораторна робота №3.2</li>
                 </ul>
             </nav>
 
@@ -1187,6 +1213,275 @@
                     </p>
                 </div>
 
+            </section>
+
+            <section class="labcontent" id="lab1-2">
+                <nav class="labmenu">
+                    <ul>
+                        <li onclick="toggleContent('l1_2-menu1', this)">
+                            Тема, мета, репозиторії</li>
+                        <li onclick="toggleContent('l1_2-menu2', this)">
+                            Способи підключення стилів</li>
+                        <li onclick="toggleContent('l1_2-menu3', this)">
+                            Селектори
+                        </li>
+                            <ul class="labsubmenu">
+                                <li onclick="toggleContent('l1_2-menu4', this)">Селектор тегу</li>
+                                <li onclick="toggleContent('l1_2-menu5', this)">Селектор класу</li>
+                                <li onclick="toggleContent('l1_2-menu6', this)">Селектор ідентифікатора</li>
+                                <li onclick="toggleContent('l1_2-menu7', this)">Інші селектори</li>
+                            </ul>
+                        <li onclick="toggleContent('l1_2-menu8', this)">
+                            Самостійна робота №1.2
+                        </li>
+                            <ul class="labsubmenu">
+                                <li onclick="toggleContent('l1_2-menu9', this)">Шрифт, Google Fonts</li>
+                                <li onclick="toggleContent('l1_2-menu10', this)">СSS: таблиці, фон, списки</li>
+                                <li onclick="toggleContent('l1_2-menu11', this)">CSS: просунутий</li>
+                            </ul>
+                        <li onclick="toggleContent('l1_2-menu12', this)">
+                            ВИСНОВКИ
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="content-box" id="l1_2-menu1">
+                    <h1>
+                        Лабораторна робота №1.2
+                    </h1>
+                    <h2>
+                        Тема
+                    </h2>
+                    <p>
+                        Каскадні таблиці стилів. Селектори. Ідентифікатори. Стильове оформлення текстових елементів у HTML-документі.
+                    </p>
+                    <h2>
+                        Мета
+                    </h2>
+                    <p>
+                        Придбати практичні навички роботи з селекторами: тегів, класів, 
+                        ідентифікаторів; списками, різноманітними властивостями кольору і фону, 
+                        оформленням текстових елементів.
+                    </p>
+                    <h2>
+                        Посилання
+                    </h2>
+                    <h3>
+                        Власний WEB-застосунок
+                    </h3>
+                    <p>
+                        <a target="_blank" href="https://github.com/barsikfive/zpi-zp41_appWEB-AbaievaAlina-KPI-2025">Репозиторій</a><br>
+                        <a target="_blank" href="https://barsikfive.github.io/zpi-zp41_appWEB-AbaievaAlina-KPI-2025/">Жива сторінка</a>
+                    </p>
+                    <h3>
+                        Звітний HTML-документ
+                    </h3>
+                    <p>
+                        <a target="_blank" href="https://github.com/barsikfive/zpi-zp41_appRECORD-AbaievaAlina-KPI-2025">Репозиторій</a><br>
+                        <a target="_blank" href="https://barsikfive.github.io/zpi-zp41_appRECORD-AbaievaAlina-KPI-2025/">Жива сторінка</a>
+                    </p>
+                    <h3>
+                        Самостійні роботи
+                    </h3>
+                    <p>
+                        <a target="_blank" href="https://github.com/barsikfive/zpi-zp41_appINDEPENDENT-AbaievaAlina-KPI-2025">Репозиторій</a><br>
+                        <a target="_blank" href="https://barsikfive.github.io/zpi-zp41_appINDEPENDENT-AbaievaAlina-KPI-2025/">Жива сторінка</a>
+                    </p>
+                </div>
+
+                <div class="content-box" id="l1_2-menu2">
+                    <h1>Зовнішня таблиця стилів</h1>
+                    <p>Зовнішні стилі визначені в елементі &lt;link&gt; всередині розділу &lt;head&gt; HTML сторінки. 
+                    Файл не повинен містити жодних HTML-тегів. Файл таблиці стилів має бути збережено з розширенням <em>.css</em>.</p>
+                    <h1>Внутрішня таблиця стилів</h1>
+                    <p>Внутрішня таблиця стилів може використовуватися, якщо одна окрема HTML сторінка має свій 
+                       унікальний стиль і цей стиль більше ніде не використовується на інших сторінках.</p>
+                    <h1>Вбудовані стилі</h1>
+                    <p>Вбудований стиль може використовуватися для застосування унікального стилю для окремого елементу 
+                       на HTML сторінці. Щоб використовувати вбудовані стилі, додайте атрибут стилю до відповідного 
+                       елементу (тегу). Атрибут style може містити будь-яку властивість CSS.</p>
+                    <h1>Порядок використання каскадних стилів</h1>
+                    <p>Вбудований стиль має найвищий пріоритет та перевизначає зовнішні та внутрішні стилі й налаштування браузера за замовчуванням.</p>
+                </div>
+
+                <div class="content-box" id="l1_2-menu3">Селектор - це частина CSS-правила, яка повідомляє браузеру, до якого 
+                    елементу веб-сторінки буде застосований CSS стиль. Тобто, селектор - це вибірка та формальний опис того елемента 
+                    чи групи елементів, до яких будуть застосовані CSS стилі.                    
+                </div>
+                <div class="content-box" id="l1_2-menu4">
+                    <h1>Селектор тегу</h1>
+                    <p>Селектори тегу використані для створення меню сайту</p>
+                    <h2>Зображення</h2>
+                    <p>Список пунктів меню міг змінитися під час розробки.</p>
+                    <img src="images/css-selector-tag.png"></img>
+                    <h2>Код</h2>
+                    <pre>header nav {
+    margin: 10px 40px;
+    font-family: &quot;Manrope&quot;;
+    font-weight: bold;
+    color: #D8DDD3;
+}
+
+header nav ul {                
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav li {
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+}
+
+header nav a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 300ms;
+}</pre>
+                </div>
+                <div class="content-box" id="l1_2-menu5">
+                    <h1>Селектор класу</h1>
+                    <p>Селектор класу використаний для стилізації всіх секцій сайту одночасно.</p>
+                    <h2>Зображення</h2>
+                    <img src="images/css-selector-class.png" style="width: 600px;"></img>
+                    <h2>Код</h2>
+                    <pre>.showcase {
+    padding: 20px 10px;
+    border-radius: 5px;
+    
+    background-color: #205DA580;
+}</pre>
+                </div>
+                <div class="content-box" id="l1_2-menu6">
+                    <h1>Селектор ідентифікатора</h1>
+                    <p>Селектор ідентифікатора використаний для стилізації конкретного розділа сайту. В даному випадку - разом з селектором тегу та класу.</p>
+                    <h2>Зображення</h2>
+                    <img src="images/css-selector-id.png" style="width: 600px;"></img>
+                    <h2>Код</h2>
+                    <pre>#onsale div.showcase {
+    margin-bottom: 70px;
+    box-shadow: #CD62FF66 -10px 10px, #44ABEB4D -20px 20px, #CD62FF33 -30px 30px,
+                #44ABEB1A -40px 40px, #CD62FF0D -50px 50px;
+}</pre>
+                </div>
+                <div class="content-box" id="l1_2-menu7">
+                    <h1>Сусідній селектор</h1>
+                    <p>Сусідній селектор використаний для виділення кольором курсивного тексту, якому передує напівжирний текст.</p>
+                    <h2>Зображення</h2>
+                    <img src="images/css-selector-nb.png"></img>
+                    <h2>Код</h2>
+                    <pre>strong + em {
+    color: #44ABEB;
+}</pre>
+
+                    <h1>Дочірній селектор</h1>
+                    <p>Дочірній селектор використаний для виділення кольором рядка таблиці з полем email.</p>
+                    <h2>Зображення</h2>
+                    <img src="images/html-table.png"></img>
+                    <h2>Код</h2>
+                    <pre>main aside tbody > tr:nth-of-type(even) {
+    background-color: #ffffff33;
+}</pre>
+                    <h1>Селектор атрибута</h1>
+                    <p>Цей селектор використаний для створення тіні в логотипі: він одночасно застосовується як для зображення, так для тексту (вони мають в атрибуті class текст "logo").</p>
+                    <h2>Зображення</h2>
+                    <img src="images/css-selector-attr.png"></img>
+                    <h2>Код</h2>
+                    <pre>[class~="logo"] {
+filter: drop-shadow(1px -3px 3px #E79A3F);
+}</pre>
+
+                    <h1>Універсальний селектор</h1>
+                    <p>Універсальний селектор використаний для стилізації скролінга для будь-яких елементів сторінки.</p>
+                    <h2>Зображення</h2>
+                    <img src="images/css-selector-uni.png"></img>
+                    <h2>Код</h2>
+                    <pre>* {
+    scrollbar-color: #205DA580 #181A21;
+    scrollbar-width: thin;
+}</pre>
+                </div>
+                <div class="content-box" id="l1_2-menu8">
+                    <h1>Самостійна робота №1.2</h1>
+                    <p><a target="_blank" href="https://github.com/barsikfive/zpi-zp41_appINDEPENDENT-AbaievaAlina-KPI-2025/">Репозиторій</a><br>
+                       <a target="_blank" href="https://barsikfive.github.io/zpi-zp41_appINDEPENDENT-AbaievaAlina-KPI-2025/second.html">Жива сторінка</a></p>
+                </div>
+                <div class="content-box" id="l1_2-menu9">
+                    <h1>Підключення шрифтів за допомогою правила @font-face</h1>
+                    <h2>Приклад</h2>
+                    <p>Шрифт для логотипу як файл завантажено в репозиторій і прописано в стилі.</p>
+                    <img src="images/css-selector-attr.png"></img>
+                    <h2>Код</h2>
+                    <pre>@font-face {
+    font-family: "Koulen";
+    src: url('fonts/Koulen-Regular.ttf') format("truetype");
+}</pre>
+                    <h1>Підключення Google Fonts</h1>
+                    <h2>Приклад</h2>
+                    <p>Підключена каскадна таблиця Google, що містить необхідний шрифт, та налаштовано його використання для кнопки.</p>
+                    <img src="images/css-googlefonts.png"></img>
+                    <h2>Код</h2>
+                    <pre>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Koulen&family=Manrope&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Glitch&family=Rubik+Iso&display=swap" rel="stylesheet"&gt;</pre>
+                </div>
+                <div class="content-box" id="l1_2-menu10">
+                    <h1>Стиль таблиці</h1>
+                    <img src="images/html-table.png"></img>
+                    <h1>Фон секції</h1>
+                    <img src="images/css-selector-class.png" style="width:500px;"></img>
+                    <h1>Меню (зроблено списком)</h1>
+                    <img src="images/css-selector-tag.png"></img>
+                </div>
+                <div class="content-box" id="l1_2-menu11">
+                    <h1>Просунутий CSS</h1>
+                    <h2>Заокруглення кутів</h2>
+                    <img src="images/css-selector-tag.png"></img>
+                    <h2>Анімація</h2>
+                    <p>Елемент блимає жовтим кольором - це зроблено за допомогою анімації та @keyfarmes.</p>
+                    <img src="images/css-selector-class.png" style="width:500px;"></img>
+                    <img src="images/css-anim.png" style="width:500px;"></img>
+                    <h2>Кнопка</h2>
+                    <img src="images/css-googlefonts.png"></img>
+                    <h2>Випадаюча підказка</h2>
+                    <p>При наведенні курсора показує, що саме знаходиться за посиланням.</p>
+                    <img src="images/css-tooltip.png"></img>
+                    <h2>Ключові слова для кольорів</h2>
+                    <p>Наслідування кольору - прибирає стандартний колір посилань в хедері.</p>
+                    <pre>header nav a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 300ms;
+}</pre>
+                    <h2>Тіні</h2>
+                    <p>Ефекти зроблено за допомогою накладення декількох тіней.</p>
+                    <img src="images/css-shadows.png"></img>
+                    <img src="images/css-selector-id.png" style="width:500px;"></img>
+                    <h2>Переходи</h2>
+                    <p>Картинка плавно збільшується при наведенні курсора.</p>
+                    <img src="images/css-transition.png" style="width:500px;"></img>
+                </div>
+
+                <div class="content-box" id="l1_2-menu12">
+                    <h1>Засвоєння основ роботи з CSS-селекторами</h1>
+                    <p>У цій лабораторній роботі було вивчено основи роботи з різними видами CSS-селекторів: селектори тегів, класів, ідентифікаторів, а також сусідні, дочірні, атрибутні й універсальні селектори. Це дозволило зрозуміти, як точно визначати стилі для елементів HTML-документа, покращуючи їхній зовнішній вигляд і адаптивність.</p>
+                    <h1>Підключення стилів і їхній вплив</h1>
+                    <p>Було розглянуто три основні способи підключення стилів: зовнішні таблиці стилів, внутрішні стилі та вбудовані стилі. Кожен з них має свої переваги та обмеження, і їх вибір залежить від вимог до структури проєкту. Було також засвоєно, як каскадність і пріоритетність стилів впливають на кінцевий вигляд елементів сторінки.</p>
+                    <h1>Оформлення текстових елементів і роботи зі шрифтами</h1>
+                    <p>В процесі роботи вивчено підключення локальних шрифтів за допомогою правила @font-face та використання шрифтів з Google Fonts. Це допомогло набути навичок налаштування тексту, включаючи зміну його кольору, розміру, інтервалів, а також шрифтів, що створює унікальний стиль для веб-додатків.</p>
+                    <h1>Дизайн списків, таблиць і фону</h1>
+                    <p>Було вивчено стилізацію таблиць, списків та елементів фону. Завдяки цьому вдалося додати до веб-сторінки більше візуальної структури та підвищити її зручність для користувачів. Використання CSS дозволило зробити ці елементи адаптивними та естетично привабливими.</p>
+                    <h1>Просунутий CSS: тіні, анімація, переходи</h1>
+                    <p>Досліджено просунуті можливості CSS, такі як створення тіней, анімацій, плавних переходів і стилізації інтерактивних елементів. Це дало змогу покращити взаємодію користувача зі сторінкою та додати професійний вигляд веб-додатку.</p>
+                </div>
             </section>
         </main>
     </body>
