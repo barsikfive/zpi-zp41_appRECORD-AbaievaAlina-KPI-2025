@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <title>Звіти з лабораторних робіт</title>
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <script>
+            function toggleContent(targetID, clickedItem)
+            {
+                const contentBoxes = document.querySelectorAll("div.content-box");
+                contentBoxes.forEach(box => {
+                    box.style.display = "none";
+                })
+
+                const targetBox = document.getElementById(targetID);
+                if (targetBox) {
+                    targetBox.style.display = "block";
+                }
+
+                const currentActive = document.getElementsByClassName("activesubmenu")[0];
+                if (currentActive) {
+                    currentActive.classList.remove("activesubmenu");
+                }
+
+                if (clickedItem) {
+                    clickedItem.classList.add("activesubmenu");
+                }
+            }
+        </script>          
+        <style type="text/css" media="screen">
+
+/* GENERAL STYLE */
+
+            @font-face {
+                font-family: "Motiva Sans";
+                src: url('fonts/MotivaSans-Regular.otf') format("opentype");
+            }
+
+            * {
+                scrollbar-color: #205DA580 #181A21;
+                scrollbar-width: thin;
+            }
+
+            html {
+                height: 100vh;
+            }
+            
+            body {
+                width: 100%;
+                min-height: 100vh;
+                margin: 0;
+                padding: 0;
+                
+                background-color: #1E2737;
+                box-shadow: 0 -60px 300px inset #000;
+                font-family: "Motiva Sans", sans-serif;
+                font-size: 14pt;
+                line-height: 1.5;
+                color: #D8DDD3;
+            }
+            
+            a {
+                color: #3e84d6;
+                text-decoration: 1px underline;
+            }
+
+            a:hover {
+                color: honeydew;
+                text-decoration-thickness: 2px;
+            }
+
+            h1, h2, h3, p {
+                margin: 0;
+                font-size: inherit;
+            }
+
+            img {
+                display: block;
+            }
+
+            ul {
+                list-style: none;
+            }
+            
+/* HEADER STYLE */
+
+            header {
+                margin: 0;
+                width: 100%;
+                height: fit-content;
+                background-color: #181A21;
+
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            header section {
+                width: 200px;
+                height: 160px;
+                margin: 10px auto;
+                align-content: center;
+            }
+
+            section#recordinfo {
+                width: 600px;
+            }
+
+            header div {
+                width: fit-content;
+                height: fit-content;
+                margin: auto;
+            }
+
+            header h1 {
+                font-size: 20pt;
+            }
+
+            header h2 {
+                font-size: 16pt;
+            }
+
+            header h3 {
+                font-size: 14pt;
+                margin-top: 20px;
+            }
+
+            header img {
+                width: 100px;
+                height: 150px;
+            }
+
+/* MAIN STYLE */
+
+            main {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                overflow: hidden;
+
+                color: white;
+            }
+
+    /* LAB SELECTION */
+
+            nav.labselection {
+                width: 100%;
+                height: fit-content;
+                margin: auto;
+                padding: 10px;
+                background-color: #181A21;
+                border-top: solid 1px #205DA5;
+                border-bottom: solid 1px #205DA5;
+            }
+
+            .labselection ul {
+                width: fit-content;
+                height: fit-content;
+                margin: 0 auto;
+                padding: 0;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .labselection li {
+                width: fit-content;
+                height: fit-content;
+                padding: 10px;
+
+                background-color: #205DA5;
+                border: solid 1px #205DA5;
+                border-radius: 2px;
+            }
+
+            .labselection li:hover {
+                color: honeydew;
+                text-decoration: underline;
+                background-color: #3e84d6;
+                box-shadow: 0 0 10px inset #205DA5, 0 0 20px #205DA5;
+            }
+
+            li.activepage {
+                color: honeydew;
+                border: solid 1px honeydew;
+                box-shadow: 0 0 20px honeydew;
+            }
+
+    /* LAB CONTENT */
+
+            section.labcontent {
+                width: 100%;
+                height: fit-content;
+                margin: 0 auto;
+                padding: 10px;
+
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: start;
+            }
+
+            nav.labmenu {
+                width: fit-content;
+                height: fit-content;
+                margin: 20px;
+                padding: 0;
+
+                background-color: #1E2737;
+                border-radius: 2px;
+                box-shadow: 0 0 10px #000;
+            }
+
+            .labmenu ul {
+                margin: 0;
+                padding: 0;
+            }
+
+            .labmenu li {
+                width: 360px;
+                height: fit-content;
+                margin: 10px;
+                padding: 0 6px;
+
+                color: #D8DDD3;
+                background-color: #184c86;
+                border: solid 1px #205DA5;
+                border-radius: 2px;
+
+                text-align: center;
+            }
+
+            .labmenu li:hover {
+                color: honeydew;
+                background-color: #205DA5;
+                box-shadow: 0 0 10px inset #205DA5, 0 0 10px #205DA5;
+            }
+
+            .labsubmenu li {
+                margin: 10px auto;
+                width: 290px;
+            }
+
+            li.activesubmenu {
+                color: honeydew;
+                border: solid 1px honeydew;
+                box-shadow: 0 0 10px honeydew;
+            }
+
+            div.content-box {
+                min-width: 500px;
+                width: 60%;
+                min-height: 500px;
+                height: fit-content;
+                margin: 20px;
+                padding: 30px;
+
+                font-size: 12pt;
+                text-shadow: 0 0 10px #000;
+
+                background-color: #455775;
+                border-radius: 2px;
+                box-shadow: 0 0 10px #000;
+
+                display: none;
+            }
+
+            .content-box h1 {
+                font-size: 16pt;
+            }
+
+            .content-box h2 {
+                margin-top: 10px;
+                font-size: 14pt;
+            }
+
+            .content-box h3 {
+                font-size: 12pt;
+                font-weight: normal;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <header>
+            <section id="recordinfo">
+                <div>
+                    <h1>Звіти з лабораторних робіт</h1>
+                    <h2>з дисципліни «Проєктування WEB-застосувань»</h2>
+                    <h3>Студент групи ЗПІ-зп41 <strong>Абаєва Аліна Віталіївна</strong></h3>
+                </div>
+            </section>
+
+            <section>
+                    <div>
+                        <img src="images/gamebanners/banner_Helldivers2.jpg" alt="Фото"></img>
+                    </div>
+            </section>
+        </header>
+
+        <main>
+            <nav class="labselection">
+                <ul>
+                    <li class="activepage">Лабораторна робота №1.1</li>
+                    <li>Лабораторна робота №1.2</li>
+                    <li>Лабораторна робота №2.1</li>
+                    <li>Лабораторна робота №2.2</li>
+                    <li>Лабораторна робота №3.1</li>
+                    <li>Лабораторна робота №3.2</li>
+                </ul>
+            </nav>
+
+            <section class="labcontent" id="lab1-1">
+                <nav class="labmenu">
+                    <ul>
+                        <li onclick="toggleContent('l1_1-menu1', this)">
+                            Опис предметного середовища</li>
+                        <li onclick="toggleContent('l1_1-menu2', this)">
+                            Тема, мета, репозиторій</li>
+                        <li onclick="toggleContent('l1_1-menu3', this)">
+                            Структура документа
+                        </li>
+                            <ul class="labsubmenu">
+                                <li onclick="toggleContent('l1_1-menu4', this)">HTML-код ТАБЛИЦІ</li>
+                                <li onclick="toggleContent('l1_1-menu5', this)">HTML-код ЗОБРАЖЕННЯ</li>
+                                <li onclick="toggleContent('l1_1-menu6', this)">HTML-код СПИСКІВ</li>
+                                <li onclick="toggleContent('l1_1-menu7', this)">HTML-код ФОРМИ</li>
+                            </ul>
+                        <li onclick="toggleContent('l1_1-menu8', this)">
+                            ВИСНОВКИ
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="content-box" id="l1_1-menu1">
+                    <h1>
+                        Власний WEB-застосунок
+                    </h1>
+                    <h2>
+                        Тема
+                    </h2>
+                    <p>
+                        Створення веб-сайту для сервісу цифрової дистрибуції відеоігор.
+                    </p>
+                    <h2>
+                        Мета
+                    </h2>
+                    <p>
+                        Спроектувати каталог для цифрових товарів, розробити функціонал для навігації по каталогу та перегляду інформації про продукт.
+                    </p>
+                    <h2>
+                        Сценарій використання сайту
+                    </h2>
+                    <ul style="list-style: decimal; margin: 0;">
+                        <li>Перегляд крамниці з обраними та рекомендованими продуктами.</li>
+                        <li>Пошук відеоігор за жанрами.</li>
+                        <li>Обрання продукту та перегляд детальної інформації.</li>
+                    </ul>
+                </div>
+
+                <div class="content-box" id="l1_1-menu2">
+                    <h1>
+                        Лабораторна робота №1.1
+                    </h1>
+                    <h2>
+                        Тема
+                    </h2>
+                    <p>
+                        Структура HTML-документа. Вибір предметної галузі. Робота з посиланнями, таблицями, зображеннями, списками в HTML-документі.
+                    </p>
+                    <h2>
+                        Мета
+                    </h2>
+                    <p>
+                        Придбати практичні навички роботи з HTML-документом, таблицями, зображеннями, посиланнями, списками, формами. 
+                        Створити шаблон звітного HTML-документа для відображення результатів роботи всіх лабораторних робіт.
+                    </p>
+                    <h2>
+                        Посилання
+                    </h2>
+                    <h3>
+                        Власний WEB-застосунок
+                    </h3>
+                    <p>
+                        <a target="_blank" href="https://github.com/barsikfive/zpi-zp41_appWEB-AbaievaAlina-KPI-2025">Репозиторій</a><br>
+                        <a target="_blank" href="https://barsikfive.github.io/zpi-zp41_appWEB-AbaievaAlina-KPI-2025/">Жива сторінка</a>
+                    </p>
+                    <h3>
+                        Звітний HTML-документ
+                    </h3>
+                    <p>
+                        <a target="_blank" href="https://github.com/barsikfive/zpi-zp41_appRECORD-AbaievaAlina-KPI-2025">Репозиторій</a><br>
+                        <a target="_blank" href="">Жива сторінка</a>
+                    </p>
+                    <h3>
+                        Самостійні роботи
+                    </h3>
+                    <p>
+                        <a target="_blank" href="https://github.com/barsikfive/zpi-zp41_appINDEPENDENT-AbaievaAlina-KPI-2025">Репозиторій</a><br>
+                        <a target="_blank" href="https://barsikfive.github.io/zpi-zp41_appINDEPENDENT-AbaievaAlina-KPI-2025/">Жива сторінка</a>
+                    </p>
+                </div>
+
+                <div class="content-box" id="l1_1-menu3">
+                    <h1>
+                        Головна сторіка WEB-застосунку
+                    </h1>
+                    <pre>
+                    </pre>
+                </div>
+
+                <div class="content-box" id="l1_1-menu4">
+                    <h1>
+                        Таблиця
+                    </h1>
+                    <h2>
+                        Код
+                    </h2>
+                    <pre>
+&lt;table&gt;
+    &lt;caption&gt;Бажаєте отримувати повідомлення про знижки?&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th scope=&quot;col&quot; colspan=&quot;2&quot;&gt;Підпишіться на розсилку&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;label for=&quot;Ім'я&quot;&gt;Ім'я: &lt;/label&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;input type=&quot;text&quot; name=&quot;name&quot; id=&quot;name&quot; required /&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;label for=&quot;email&quot;&gt;Email: &lt;/label&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;input type=&quot;email&quot; name=&quot;email&quot; id=&quot;email&quot; required /&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;th colspan=&quot;2&quot;&gt;&lt;input class=&quot;submitbutton&quot; type=&quot;submit&quot; value=&quot;Підписатись на новини&quot; /&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;</pre>
+                    <h2>
+                        Вигляд
+                    </h2>
+                    <img src="images/html-table.png"></img>
+                    <h2>
+                        Теорія
+                    </h2>
+                    <p>
+                        &lt;table&gt; визначає таблицю.<br>
+                        &lt;th&gt; визначає клітинку заголовка в таблиці<br>
+                        &lt;tr&gt; визначає рядок у таблиці<br>
+                        &lt;td&gt; визначає клітинку в таблиці<br>
+                        &lt;caption&gt; визначає заголовок таблиці<br>
+                        &lt;thead&gt; групує вміст заголовка в таблиці<br>
+                        &lt;tbody&gt; групує основний вміст у таблиці<br>
+                        &lt;tfoot&gt; групує вміст нижнього колонтитула в таблиці<br>
+                        colspan та rowspan визначають охоплення стовпців та рядків однією клітинкою таблиці
+                    </p>
+                </div>
+
+                <div class="content-box" id="l1_1-menu5">
+                    <h1>
+                        Зображення
+                    </h1>
+                    <h2>
+                        Код
+                    </h2>
+                    <pre>&lt;img src=&quot;images/HoneyBadgerLogo_Gray.png&quot; alt=&quot;Honey Badger Logo&quot;&gt;&lt;/img&gt;</pre>
+                    <h2>
+                        Вигляд
+                    </h2>
+                    <img src="images/html-img1.png"></img>
+                    <h2>
+                        Теорія
+                    </h2>
+                    <p>
+                        Зображення має обов'язковий атрибут src, який містить шлях до зображення.<br>
+                        Атрибут alt містить текстовий опис зображення, який не обов'язковий, але неймовірно корисний для доступності - 
+                        програми читання з екрану читають цей опис своїм користувачам, так вони знають яке зображення показано, 
+                        і так само воно відображається на сторінці, якщо зображення не може бути завантажене за якою або причини.
+                    </p>
+                </div>
+
+                <div class="content-box" id="l1_1-menu6">
+                    <h1>
+                        Списки
+                    </h1>
+                    <h2>
+                        Код
+                    </h2>
+                    <pre>&lt;ol class=&quot;listlang&quot;&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+    &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul class=&quot;listpurposes&quot;&gt;
+    &lt;li&gt;Сайт розроблений у якості лабораторної роботи з проєктування WEB-застосувань.&lt;/li&gt;
+    &lt;li&gt;Він не є справжньою платформою цифрової дистрибуції для продажу і розповсюдження відеоігор.&lt;/li&gt;
+    &lt;li&gt;Для наповнення сайту використаний доступний у відкритих джерелах контент, який не протребує ліцензії.&lt;/li&gt;
+    &lt;li&gt;Сайт не використовується для комерційних цілей.&lt;/li&gt;
+&lt;/ul&gt;</pre>
+                    <h2>
+                        Вигляд
+                    </h2>
+                    <img src="images/html-lists.png"></img>
+                    <h2>
+                        Теорія
+                    </h2>
+                    <p>
+                        Списки бувають впорядковані (з нумерацією), невпорядковані (з маркером) та списками описів (в першому тегу dt вказується термін, а в другому dd - опис терміна).<br>
+                        Маркер списку можна прибрати за допомогою CSS, так створюються, наприклад, елементи меню для сайту.
+                    </p>
+                </div>
+
+                <div class="content-box" id="l1_1-menu7">
+                    <h1>
+                        Форми
+                    </h1>
+                    <h2>
+                        Код
+                    </h2>
+                    <pre>&lt;table&gt;
+    &lt;caption&gt;Бажаєте отримувати повідомлення про знижки?&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th scope=&quot;col&quot; colspan=&quot;2&quot;&gt;Підпишіться на розсилку&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;label for=&quot;Ім'я&quot;&gt;Ім'я: &lt;/label&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;input type=&quot;text&quot; name=&quot;name&quot; id=&quot;name&quot; required /&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;label for=&quot;email&quot;&gt;Email: &lt;/label&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;input type=&quot;email&quot; name=&quot;email&quot; id=&quot;email&quot; required /&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;th colspan=&quot;2&quot;&gt;&lt;input class=&quot;submitbutton&quot; type=&quot;submit&quot; value=&quot;Підписатись на новини&quot; /&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;</pre>
+                    <h2>
+                        Вигляд
+                    </h2>
+                    <img src="images/html-table.png"></img>
+                    <h2>
+                        Теорія
+                    </h2>
+                    <p>
+                        Форма HTML використовується для збору даних, введених користувачем. Введені користувачем дані найчастіше надсилаються на сервер для обробки.<br>
+                        label є підписом для поля введення даних, в той час як input відповідає за саме поле та його тип.
+                    </p>
+                </div>
+
+                <div class="content-box" id="l1_1-menu8">
+                    <h1>
+                        Висновки
+                    </h1>
+                    <h2>
+                        HTML-документ
+                    </h2>
+                    <p>
+                        HTML-документ складається з кількох основних елементів, таких як html, head, та body. Вони визначають 
+                        загальну структуру веб-сторінки. Внутрішній вміст документа оформлюється за допомогою різноманітних тегів, 
+                        що дозволяють включати заголовки, абзаци, зображення, таблиці, списки, посилання та інші елементи.
+                    </p>
+                    <h2>
+                        Посилання, таблиці, зображення
+                    </h2>
+                    <p>
+                        Робота з посиланнями в HTML дозволяє створювати інтерактивні елементи, які ведуть користувача до інших 
+                        сторінок або зовнішніх ресурсів. Для цього використовуються теги &lt;a&gt;, що надають можливість створювати 
+                        гіперпосилання. Крім того, HTML дозволяє вставляти зображення за допомогою тега &lt;img&gt;, що дає змогу 
+                        візуалізувати інформацію, що важлива для звіту чи презентації. Таблиці, оформлені за допомогою тегів 
+                        &lt;table&gt;, &lt;tr&gt;, &lt;td&gt;, надають можливість структуровано подати дані, що є зручним для відображення різних 
+                        результатів або статистичних показників.                        
+                    </p>
+                    <h2>
+                        Списки
+                    </h2>
+                    <p>
+                        HTML також підтримує використання списків, як нумерованих, так і ненумерованих, за допомогою тегів 
+                        &lt;ol&gt; та &lt;ul&gt;, що дають змогу впорядкувати інформацію. Списки часто використовуються для 
+                        відображення етапів виконання задач чи переліків важливих елементів, що підвищує читабельність документа. 
+                        Після оволодіння базовими елементами HTML, можна створювати більш складні документи, де поєднуються таблиці, списки, 
+                        зображення і посилання для ефективної презентації результатів лабораторних робіт та інших проектів.
+                    </p>
+                    <h2>
+                        Форми
+                    </h2>
+                    <p>
+                        Форми в HTML використовуються для збору та обробки даних, які користувачі вводять на веб-сторінках. 
+                        Вони створюються за допомогою тегу <form>, всередині якого можна додавати різні елементи введення, такі 
+                        як текстові поля (&lt;input&gt;), випадаючі списки (&lt;select&gt;), радіо-кнопки (&lt;input type="radio"&gt;) 
+                        та чекбокси (&lt;input type="checkbox"&gt;). Атрибути тегів, такі як action і method, визначають місце та метод передачі 
+                        даних. Форми використовуються для інтерактивності на веб-сторінках, наприклад, для збору відгуків, реєстрацій 
+                        чи фільтрації інформації на основі введених параметрів.
+                    </p>
+                </div>
+
+            </section>
+        </main>
+    </body>
+</html>
