@@ -377,15 +377,17 @@
                         Мета
                     </h2>
                     <p>
-                        Спроектувати каталог для цифрових товарів, розробити функціонал для навігації по каталогу та перегляду інформації про продукт.
+                        Створити головну сторінку каталогу цифрових товарів, спроектувати прості та зручні категорії продуктів, які пригортають увагу, розробити функціонал для виділення продукту, що зацікавив користувача.
                     </p>
                     <h2>
                         Сценарій використання сайту
                     </h2>
                     <ul style="list-style: decimal; margin: 0;">
-                        <li>Вибір сторінок  з обраними та рекомендованими продуктами.</li>
-                        <li>Пошук відеоігор за жанрами.</li>
-                        <li>Обрання продукту та перегляд детальної інформації.</li>
+                        <li>Перегляд каталогу відібраних та рекомендованих продуктів.</li>
+                        <li>Показ пропозицій по товарах зі знижкою та по акції.</li>
+                        <li>Перегляд найпопулярніших продуктів.</li>
+                        <li>Наведення фокусу на продукт, що знаходиться під курсором.</li>
+                        <li>Оформлення підписки на особливі пропозиції та акції.</li>
                     </ul>
                 </div>
 
@@ -2767,6 +2769,516 @@ footer {
                     <p>Інструменти розробника (наприклад, DevTools у браузерах) допомагають тестувати адаптивність сторінок. Вони дозволяють емулювати різні розміри екранів, аналізувати медіа-запити, змінювати стилі в реальному часі та знаходити помилки у верстці, що значно полегшує процес розробки.</p>
                     <h1>Стратегія Mobile First</h1>
                     <p>Mobile First — це підхід до дизайну, де розробка починається з мобільної версії, а потім поступово додаються стилі для більш широких екранів. Цей підхід враховує зростаюче використання мобільних пристроїв і дозволяє створювати оптимізовані сайти для мобільних користувачів.</p>
+                </div>
+            </section>
+
+            <section class="labcontent" id="lab3-1">
+                <nav class="labmenu">
+                    <ul>
+                        <li onclick="toggleContent('l3_1-menu1', this)">
+                            Тема, мета, репозиторії</li>
+                        <li onclick="toggleContent('l3_1-menu2', this)">
+                            ЗАВДАННЯ №1
+                        </li>
+                        <li onclick="toggleContent('l3_1-menu3', this)">
+                            ЗАВДАННЯ №2
+                        </li>
+                        <li onclick="toggleContent('l3_1-menu4', this)">
+                            ЗАВДАННЯ №3
+                        </li>
+                        <li onclick="toggleContent('l3_1-menu5', this)">
+                            ЗАВДАННЯ №4
+                        </li>
+                        <li onclick="toggleContent('l3_1-menu6', this)">
+                            ЗАВДАННЯ №5
+                        </li>
+                        <li onclick="toggleContent('l3_1-menu7', this)">
+                            ВИСНОВКИ
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="content-box" id="l3_1-menu1">
+                    <h1>
+                        Лабораторна робота №3.1
+                    </h1>
+                    <h2>
+                        Тема
+                    </h2>
+                    <p>
+                        Функціональне застосування JavaScript у HTML-документі. Використання масивів у JS-сценаріях. Реалізація програм засобами мови JavaScript.
+                    </p>
+                    <h2>
+                        Мета
+                    </h2>
+                    <p>
+                        Придбати практичні навички роботи з конструкціями мови JS, масивами та фугкціями у JS-сценаріях. Реалізація програм засобами мови JavaScript.
+                    </p>
+                    <h2>
+                        Посилання
+                    </h2>
+                    <h3>
+                        Власний WEB-застосунок
+                    </h3>
+                    <p>
+                        <a target="_blank" href="https://github.com/barsikfive/zpi-zp41_appWEB-AbaievaAlina-KPI-2025">Репозиторій</a><br>
+                        <a target="_blank" href="https://barsikfive.github.io/zpi-zp41_appWEB-AbaievaAlina-KPI-2025/">Жива сторінка</a>
+                    </p>
+                    <h3>
+                        Звітний HTML-документ
+                    </h3>
+                    <p>
+                        <a target="_blank" href="https://github.com/barsikfive/zpi-zp41_appRECORD-AbaievaAlina-KPI-2025">Репозиторій</a><br>
+                        <a target="_blank" href="https://barsikfive.github.io/zpi-zp41_appRECORD-AbaievaAlina-KPI-2025/">Жива сторінка</a>
+                    </p>
+                    <h3>
+                        Самостійні роботи
+                    </h3>
+                    <p>
+                        <a target="_blank" href="https://github.com/barsikfive/zpi-zp41_appINDEPENDENT-AbaievaAlina-KPI-2025">Репозиторій</a><br>
+                        <a target="_blank" href="https://barsikfive.github.io/zpi-zp41_appINDEPENDENT-AbaievaAlina-KPI-2025/">Жива сторінка</a>
+                    </p>
+                </div>
+
+                <div class="content-box" id="l3_1-menu2">
+                    <h1>Код</h1>
+                    <pre>function getShippingMessage(country, price, deliveryFee) {
+    const totalPrice = price + deliveryFee;
+    return `Shipping to ${country} will cost ${totalPrice} credits`;
+}
+
+console.log(getShippingMessage("Ukraine", 100, 20));</pre>
+                    <h1>Консоль</h1>
+                    <img src="images/l3_1-task1.png"></img>
+                </div>
+                
+                <div class="content-box" id="l3_1-menu3">
+                    <h1>Код</h1>
+                    <pre>function makeTransaction(quantity, pricePerDroid, customerCredits) {
+    const totalPrice = pricePerDroid * quantity;
+    if (totalPrice > customerCredits)
+    {
+        return `Insufficient funds!`
+    }
+    else
+    {
+        return `You ordered ${quantity} droids worth ${totalPrice} credits!`
+    }
+}
+
+console.log(makeTransaction(100, 5, 20));
+console.log(makeTransaction(10, 20, 999));</pre>
+                    <h1>Консоль</h1>
+                    <img src="images/l3_1-task2.png"></img>
+                </div>
+
+                <div class="content-box" id="l3_1-menu4">
+                    <h1>Код</h1>
+                    <pre>function makeArray(firstArray, secondArray, maxLength) {
+    const combinedArray = firstArray.concat(secondArray);
+        
+    if (combinedArray.length > maxLength) {
+        return combinedArray.slice(0, maxLength);
+    }
+    
+    return combinedArray;
+}
+
+const array1 = [1, 2, 3];
+const array2 = [4, 5, 6, 7];
+const maxLength1 = 5;
+
+console.log(makeArray(array1, array2, maxLength1)); 
+
+const array3 = [4, 3];
+const array4 = [2, 1];
+const maxLength2 = 5;
+
+console.log(makeArray(array3, array4, maxLength2));</pre>
+                    <h1>Консоль</h1>
+                    <img src="images/l3_1-task3.png"></img>
+                </div>
+
+                <div class="content-box" id="l3_1-menu5">
+                    <h1>Код</h1>
+                    <pre>function makeArrayC(firstArray, secondArray) {
+    const resultArray = [];
+    for( i = 0; i &lt; firstArray.length; i++ ) {
+        if (firstArray[i] != secondArray[i])
+            {
+                var c = 1 / (firstArray[i] - secondArray[i]);
+                resultArray.push(c);
+            }
+            else
+            {
+                resultArray.push(1);
+            }
+            
+        }
+
+        return resultArray;
+    }
+
+function swapFirstElement(arrayC) {
+    var lastElementId = arrayC.length - 1;
+
+    var b = arrayC[0];
+    arrayC[0] = arrayC[lastElementId];
+    arrayC[lastElementId] = b;
+    
+    return arrayC;
+}
+
+function sortBubble(arrayC) {
+    const n = arrayC.length;
+    
+    for (let i = 0; i &lt; n - 1; i++) {
+        for (let j = 0; j &lt; n - 1 - i; j++) {
+            if (arrayC[j] > arrayC[j + 1]) {
+                // Обмін місцями
+                [arrayC[j], arrayC[j + 1]] = [arrayC[j + 1], arrayC[j]];
+            }
+        }
+    }
+
+    return arrayC;
+}
+
+
+const arrayA = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const arrayB = [11, 12, 13, 14, 5, 16, 17, 18, 19, 20];
+const arrayC = makeArrayC(arrayA, arrayB);
+console.log(arrayC);
+
+console.log(swapFirstElement(arrayC));
+console.log(sortBubble(arrayC));</pre>
+                    <h1>Консоль</h1>
+                    <img src="images/l3_1-task4.png"></img>
+                </div>
+
+                <div class="content-box" id="l3_1-menu6">
+                    <p><a href="lab3-1_task5.html">Посилання на сторінку</a></p>
+                    <h1>Код</h1>
+                    <pre>// Застосувати напівжирний стиль
+function applyBold() {
+    const selection = window.getSelection();
+    const range = selection.getRangeAt(0);
+    const span = document.createElement('span');
+    span.style.fontWeight = 'bold';
+    range.surroundContents(span);
+    updateFormattedText();
+}
+
+// Застосувати курсив
+function applyItalic() {
+    const selection = window.getSelection();
+    const range = selection.getRangeAt(0);
+    const span = document.createElement('span');
+    span.style.fontStyle = 'italic';
+    range.surroundContents(span);
+    updateFormattedText();
+}
+
+// Застосувати підкреслення
+function applyUnderline() {
+    const selection = window.getSelection();
+    const range = selection.getRangeAt(0);
+    const span = document.createElement('span');
+    span.style.textDecoration = 'underline';
+    range.surroundContents(span);
+    updateFormattedText();
+}
+
+// Змінити колір тексту
+function changeColor() {
+    const selection = window.getSelection();
+    const range = selection.getRangeAt(0);
+    const color = prompt("Введіть назву кольору англійською або hex-код (наприклад, 'red' or '#ff5733'):");
+    if (color) {
+        const span = document.createElement('span');
+        span.style.color = color;
+        range.surroundContents(span);
+    }
+    updateFormattedText();
+}
+
+// Змінити регістр тексту (великий/малий)
+function toggleCase() {
+    const selection = window.getSelection();
+    const selectedText = selection.toString();
+
+    if (selectedText) {
+        const upperCaseText = selectedText.toUpperCase();
+        const lowerCaseText = selectedText.toLowerCase();
+
+        const span = document.createElement('span');
+        span.textContent = (selectedText === upperCaseText) ? lowerCaseText : upperCaseText;
+        selection.deleteFromDocument();
+        selection.getRangeAt(0).insertNode(span);
+    } else {
+        alert("Текст не виділено");
+    }
+    updateFormattedText();
+}
+
+// Оновлюємо форматований текст
+function updateFormattedText() {
+    const editor = document.getElementById('editor');
+    const formattedText = document.getElementById('formattedText');
+    formattedText.innerHTML = editor.innerHTML;
+}</pre>
+                    <h1>Вигляд</h1>
+                    <img src="images/l3_1-task5.png"></img>
+                </div>
+
+                <div class="content-box" id="l3_1-menu7">
+                    <h1>Результати лабораторної роботи</h1>
+                    <p>Освоєно основи використання JavaScript для роботи з масивами та функціями в HTML-документах. Було розглянуто створення та виклик функцій, маніпулювання даними через масиви, а також застосування отриманих результатів на веб-сторінці.</p>
+                    <p>Основну увагу було приділено практиці роботи з масивами, їх обробці, додаванню, сортуванню та зміні елементів. Також була реалізована робота з текстовими даними, що дозволяє форматувати і адаптувати їх відповідно до умов задачі.</p>
+                    <p>Поглиблено розуміння основ JavaScript та здобуто навички ефективно працювати з даними в реальних веб-застосунках.</p>
+                </div>
+            </section>
+
+            <section class="labcontent" id="lab3-2">
+                <nav class="labmenu">
+                    <ul>
+                        <li onclick="toggleContent('l3_2-menu1', this)">
+                            Тема, мета, репозиторії</li>
+                        <li onclick="toggleContent('l3_2-menu2', this)">
+                            ЗАВДАННЯ №1
+                        </li>
+                        <li onclick="toggleContent('l3_2-menu3', this)">
+                            ЗАВДАННЯ №2
+                        </li>
+                        <li onclick="toggleContent('l3_2-menu4', this)">
+                            ЗАВДАННЯ №3
+                        </li>
+                        <li onclick="toggleContent('l3_2-menu5', this)">
+                            ЗАВДАННЯ №4
+                        </li>
+                        <li onclick="toggleContent('l3_2-menu6', this)">
+                            ЗАВДАННЯ №5
+                        </li>
+                        <li onclick="toggleContent('l3_2-menu7', this)">
+                            ВИСНОВКИ
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="content-box" id="l3_2-menu1">
+                    <h1>
+                        Лабораторна робота №3.2
+                    </h1>
+                    <h2>
+                        Тема
+                    </h2>
+                    <p>
+                        Об'єкт. Методи об'єкта. Масив об'єктів. Деструктуризація об'єктів. Callback. Стрілочні функції. Стрілочні функції як колбеки.
+                    </p>
+                    <h2>
+                        Мета
+                    </h2>
+                    <p>
+                        Придбати практичні навички роботи з об'єктами. Методи об'єкта. Callback. Стрілочні функції. Стрілочні функції як колбеки. Реалізація програм засобами мови JavaScript.
+                    </p>
+                    <h2>
+                        Посилання
+                    </h2>
+                    <h3>
+                        Власний WEB-застосунок
+                    </h3>
+                    <p>
+                        <a target="_blank" href="https://github.com/barsikfive/zpi-zp41_appWEB-AbaievaAlina-KPI-2025">Репозиторій</a><br>
+                        <a target="_blank" href="https://barsikfive.github.io/zpi-zp41_appWEB-AbaievaAlina-KPI-2025/">Жива сторінка</a>
+                    </p>
+                    <h3>
+                        Звітний HTML-документ
+                    </h3>
+                    <p>
+                        <a target="_blank" href="https://github.com/barsikfive/zpi-zp41_appRECORD-AbaievaAlina-KPI-2025">Репозиторій</a><br>
+                        <a target="_blank" href="https://barsikfive.github.io/zpi-zp41_appRECORD-AbaievaAlina-KPI-2025/">Жива сторінка</a>
+                    </p>
+                    <h3>
+                        Самостійні роботи
+                    </h3>
+                    <p>
+                        <a target="_blank" href="https://github.com/barsikfive/zpi-zp41_appINDEPENDENT-AbaievaAlina-KPI-2025">Репозиторій</a><br>
+                        <a target="_blank" href="https://barsikfive.github.io/zpi-zp41_appINDEPENDENT-AbaievaAlina-KPI-2025/">Жива сторінка</a>
+                    </p>
+                </div>
+
+                <div class="content-box" id="l3_2-menu2">
+                    <h1>Код</h1>
+                    <pre>function getProductDetails(productId) {
+    const products = [
+        { id: 1, name: 'Laptop', price: 1000 },
+        { id: 2, name: 'Phone', price: 500 },
+        { id: 3, name: 'Tablet', price: 300 }
+    ];
+
+    const product = products.find(item => item.id === productId);
+
+    if (product) {
+        successCallback(product);
+    } else {
+        errorCallback('Product not found');
+    }
+}
+
+function successCallback(product) {
+    console.log('Product found:', product);
+}
+
+function errorCallback(errorMessage) {
+    console.log('Error:', errorMessage);
+}
+
+getProductDetails(2);
+getProductDetails(5);</pre>
+                    <h1>Консоль</h1>
+                    <img src="images/l3_2-task1.png"></img>
+                </div>
+
+                <div class="content-box" id="l3_2-menu3">
+                    <h1>Код</h1>
+                    <pre>const concerts = {
+    Київ: new Date(&quot;2020-04-01&quot;),
+    Умань: new Date(&quot;2025-07-02&quot;),
+    Вінниця: new Date(&quot;2020-04-21&quot;),
+    Одеса: new Date(&quot;2025-03-15&quot;),
+    Хмельницький: new Date(&quot;2020-04-18&quot;),
+    Харків: new Date(&quot;2025-07-10&quot;),
+};
+
+const currentDate = new Date();
+
+const futureConcerts = Object.entries(concerts)
+    .filter(([city, date]) =&gt; date &gt; currentDate)
+    .sort(([, dateA], [, dateB]) =&gt; dateA - dateB)
+    .map(([city]) =&gt; city);
+
+console.log(futureConcerts);</pre>
+                    <h1>Консоль</h1>
+                    <img src="images/l3_2-task2.png"></img>
+                </div>
+
+                <div class="content-box" id="l3_2-menu4">
+                    <h1>Код</h1>
+                    <pre>function applyDiscount(medicines) {
+    return medicines.map((medicine, index) =&gt; {
+        if (medicine.price &gt; 300) {
+            return { 
+                id: index + 1,
+                name: medicine.name, 
+                price: medicine.price * 0.7
+            };
+        }
+        return { 
+            id: index + 1,
+            name: medicine.name, 
+            price: medicine.price
+        };
+    });
+}
+
+const medicines = [
+    { name: &quot;Noshpa&quot;, price: 170 },
+    { name: &quot;Analgin&quot;, price: 55 },
+    { name: &quot;Quanil&quot;, price: 310 },
+    { name: &quot;Alphacholine&quot;, price: 390 },
+];
+
+const updatedMedicines = applyDiscount(medicines);
+
+for( i = 0; i &lt; updatedMedicines.length; i++ ) {
+    console.log(updatedMedicines[i]);
+}</pre>
+                    <h1>Консоль</h1>
+                    <img src="images/l3_2-task3.png"></img>
+                </div>
+
+                <div class="content-box" id="l3_2-menu5">
+                    <h1>Код</h1>
+                    <pre>function Storage(initialItems) {
+    this.items = initialItems;
+
+    this.getItems = function() {
+        return this.items;
+    };
+
+    this.addItem = function(item) {
+        this.items.push(item);
+    };
+
+    this.removeItem = function(item) {
+        const index = this.items.indexOf(item);
+        if (index !== -1) {
+            this.items.splice(index, 1);
+        } else {
+            console.log(`Item &quot;${item}&quot; not found.`);
+        }
+    };
+}
+
+const arr = [&quot;apple&quot;, &quot;banana&quot;, &quot;mango&quot;];
+
+const storage = new Storage(arr);
+
+console.log(storage.getItems());
+
+storage.addItem(&quot;orange&quot;);
+console.log(storage.getItems());
+
+storage.removeItem(&quot;banana&quot;);
+console.log(storage.getItems());
+
+storage.removeItem(&quot;pear&quot;);</pre>
+                    <h1>Консоль</h1>
+                    <img src="images/l3_2-task4.png"></img>
+                </div>
+
+                <div class="content-box" id="l3_2-menu6">
+                    <h1>Код</h1>
+                    <pre>function checkBrackets(str) {
+    const stack = [];
+    
+    const matchingBrackets = {
+        ')': '(',
+        '}': '{',
+        ']': '['
+    };
+
+    for (let char of str) {
+        
+        if (char === '(' || char === '{' || char === '[') {
+            stack.push(char);
+        } 
+        
+        else if (char === ')' || char === '}' || char === ']') {
+            
+            if (stack.length === 0 || stack[stack.length - 1] !== matchingBrackets[char]) {
+                return false;
+            }
+            stack.pop();
+        }
+    }
+
+    return stack.length === 0;
+}
+
+console.log(checkBrackets(&quot;someFn() {} []&quot;));
+console.log(checkBrackets(&quot;someFn() { [] }&quot;));
+console.log(checkBrackets(&quot;someFn( {} [ ]&quot;));
+console.log(checkBrackets(&quot;someFn( {} [ ] )&quot;));</pre>
+                    <h1>Консоль</h1>
+                    <img src="images/l3_2-task5.png"></img>
+                </div>
+
+                <div class="content-box" id="l3_2-menu7">
+                    <h1>Результати лабораторної роботи</h1>
+                    <p>У цій лабораторній роботі було розглянуто основні принципи роботи з об'єктами в JavaScript, включаючи методи об'єкта та масиви об'єктів. Розглянуті техніки деструктуризації об'єктів дозволяють більш ефективно працювати з даними, зокрема для витягування лише необхідних властивостей без необхідності звертатися до всього об'єкта. Важливою частиною роботи стало застосування методів об'єктів, що дозволяють організовувати код у вигляді об'єктів, що володіють як даними, так і функціоналом.</p>
+                    <p>Крім того, велика увага була приділена використанню callback-функцій. Колбеки є важливим інструментом для асинхронного програмування та обробки результатів, які з'являються в процесі виконання програми. Стрілочні функції, як компактний та зручний спосіб оголошення функцій, використовуються для створення колбеків і сприяють написанню більш читабельного та зрозумілого коду. Використання стрілочних функцій зменшує кількість зайвих рядків коду і робить його більш лаконічним.</p>
+                    <p>Завершуючи, вивчення роботи з об'єктами, колбеками та стрілочними функціями допомагає підвищити ефективність програмування в JavaScript. Опанування цих тем дозволяє зручно маніпулювати даними, будувати асинхронні операції та отримувати більш гнучкі й потужні рішення для складних задач. Застосування цих знань у практиці відкриває нові можливості для розробки ефективних і масштабованих програм.</p>
                 </div>
             </section>
         </main>
