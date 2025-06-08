@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Завдання 6: Список категорій</title>
+<style>
+  body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+  }
+  #categories {
+    list-style: none;
+    padding: 0;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    max-width: 400px;
+    margin: 20px auto;
+  }
+  .item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+  }
+  .item:last-child {
+    border-bottom: none;
+  }
+  .item h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  .item ul {
+    list-style: disc inside;
+    padding-left: 20px;
+    margin: 0;
+  }
+  .item li {
+    margin-bottom: 5px;
+  }
+</style>
+</head>
+<body>
+
+  <h1>Список категорій</h1>
+
+  <ul id="categories">
+    <li class="item">
+      <h2>Animals</h2>
+      <ul>
+        <li>Cat</li>
+        <li>Hamster</li>
+        <li>Horse</li>
+        <li>Parrot</li>
+      </ul>
+    </li>
+    <li class="item">
+      <h2>Products</h2>
+      <ul>
+        <li>Bread</li>
+        <li>Parsley</li>
+        <li>Cheese</li>
+      </ul>
+    </li>
+    <li class="item">
+      <h2>Technologies</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node.js</li>
+      </ul>
+    </li>
+  </ul>
+
+  <script>
+    const categoriesList = document.querySelector('#categories');
+    const categoryItems = categoriesList.querySelectorAll('.item');
+
+    console.log(`Number of categories: ${categoryItems.length}`);
+
+    categoryItems.forEach(item => {
+      const categoryTitle = item.querySelector('h2').textContent;
+      const categoryElementsCount = item.querySelectorAll('ul > li').length;
+
+      console.log(`Category: ${categoryTitle}`);
+      console.log(`Elements: ${categoryElementsCount}`);
+    });
+  </script>
+
+</body>
+</html>

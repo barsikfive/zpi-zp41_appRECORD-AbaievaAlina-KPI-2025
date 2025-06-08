@@ -185,6 +185,7 @@
                 display: flex;
                 flex-wrap: wrap;
                 gap: 20px;
+                justify-content: center;
             }
 
             .labselection li {
@@ -337,6 +338,9 @@
                     <li onclick="toggleLab('lab2-2', this)">Лабораторна робота №2.2</li>
                     <li onclick="toggleLab('lab3-1', this)">Лабораторна робота №3.1</li>
                     <li onclick="toggleLab('lab3-2', this)">Лабораторна робота №3.2</li>
+                    <li onclick="toggleLab('lab4', this)">Лабораторна робота №4</li>
+                    <li onclick="toggleLab('lab5', this)">Лабораторна робота №5</li>
+                    <li onclick="toggleLab('lab6', this)">Лабораторна робота №6</li>
                 </ul>
             </nav>
 
@@ -3267,6 +3271,598 @@ console.log(checkBrackets(&quot;someFn( {} [ ] )&quot;));</pre>
                 </div>
 
                 <div class="content-box" id="l3_2-menu7">
+                    <h1>Результати лабораторної роботи</h1>
+                    <p>У цій лабораторній роботі було розглянуто основні принципи роботи з об'єктами в JavaScript, включаючи методи об'єкта та масиви об'єктів. Розглянуті техніки деструктуризації об'єктів дозволяють більш ефективно працювати з даними, зокрема для витягування лише необхідних властивостей без необхідності звертатися до всього об'єкта. Важливою частиною роботи стало застосування методів об'єктів, що дозволяють організовувати код у вигляді об'єктів, що володіють як даними, так і функціоналом.</p>
+                    <p>Крім того, велика увага була приділена використанню callback-функцій. Колбеки є важливим інструментом для асинхронного програмування та обробки результатів, які з'являються в процесі виконання програми. Стрілочні функції, як компактний та зручний спосіб оголошення функцій, використовуються для створення колбеків і сприяють написанню більш читабельного та зрозумілого коду. Використання стрілочних функцій зменшує кількість зайвих рядків коду і робить його більш лаконічним.</p>
+                    <p>Завершуючи, вивчення роботи з об'єктами, колбеками та стрілочними функціями допомагає підвищити ефективність програмування в JavaScript. Опанування цих тем дозволяє зручно маніпулювати даними, будувати асинхронні операції та отримувати більш гнучкі й потужні рішення для складних задач. Застосування цих знань у практиці відкриває нові можливості для розробки ефективних і масштабованих програм.</p>
+                </div>
+            </section>
+
+            <section class="labcontent" id="lab4">
+                <nav class="labmenu">
+                    <ul>
+                        <li onclick="toggleContent('l4-menu1', this)">
+                            Тема, мета, репозиторії</li>
+                        <li onclick="toggleContent('l4-menu2', this)">
+                            ЗАВДАННЯ №1
+                        </li>
+                        <li onclick="toggleContent('l4-menu3', this)">
+                            ЗАВДАННЯ №2
+                        </li>
+                        <li onclick="toggleContent('l4-menu4', this)">
+                            ЗАВДАННЯ №3
+                        </li>
+                        <li onclick="toggleContent('l4-menu5', this)">
+                            ЗАВДАННЯ №4
+                        </li>
+                        <li onclick="toggleContent('l4-menu6', this)">
+                            ЗАВДАННЯ №5
+                        </li>
+                        <li onclick="toggleContent('l4-menu7', this)">
+                            ВИСНОВКИ
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="content-box" id="l4-menu1">
+                    <h1>
+                        Лабораторна робота №4
+                    </h1>
+                    <h2>
+                        Тема
+                    </h2>
+                    <p>
+                        Класи. Об'єктна модель документа (DOM). Події. Об'єкт події. Делегування подій. Throttle. Модульность коду.
+                    </p>
+                    <h2>
+                        Мета
+                    </h2>
+                    <p>
+                        Придбати практичні навички роботи з об'єктами. Методи об'єкта. Callback. Стрілочні функції. Стрілочні функції як колбеки. Реалізація програм засобами мови JavaScript.
+                    </p>
+                    <h2>
+                        Посилання
+                    </h2>
+                    <h3>
+                        Власний WEB-застосунок
+                    </h3>
+                    <p>
+                        <a target="_blank" href="https://github.com/barsikfive/zpi-zp41_appWEB-AbaievaAlina-KPI-2025">Репозиторій</a><br>
+                        <a target="_blank" href="https://barsikfive.github.io/zpi-zp41_appWEB-AbaievaAlina-KPI-2025/">Жива сторінка</a>
+                    </p>
+                    <h3>
+                        Звітний HTML-документ
+                    </h3>
+                    <p>
+                        <a target="_blank" href="https://github.com/barsikfive/zpi-zp41_appRECORD-AbaievaAlina-KPI-2025">Репозиторій</a><br>
+                        <a target="_blank" href="https://barsikfive.github.io/zpi-zp41_appRECORD-AbaievaAlina-KPI-2025/">Жива сторінка</a>
+                    </p>
+                    <h3>
+                        Самостійні роботи
+                    </h3>
+                    <p>
+                        <a target="_blank" href="https://github.com/barsikfive/zpi-zp41_appINDEPENDENT-AbaievaAlina-KPI-2025">Репозиторій</a><br>
+                        <a target="_blank" href="https://barsikfive.github.io/zpi-zp41_appINDEPENDENT-AbaievaAlina-KPI-2025/">Жива сторінка</a>
+                    </p>
+                </div>
+
+                <div class="content-box" id="l4-menu2">
+                    <h1>Код</h1>
+                    <pre>function showInputValue() {
+                            const inputValue = document.getElementById('myInput').value;
+                            document.getElementById('outputValue').textContent = inputValue;
+                        }</pre>
+                    <h1>Приклад</h1>
+                    <input type="text" id="myInput" placeholder="Введіть щось тут">
+
+                    <button onclick="showInputValue()">SHOW ME</button>
+
+                    <p id="outputValue"></p>
+                    <script>
+                        function showInputValue() {
+                            const inputValue = document.getElementById('myInput').value;
+                            document.getElementById('outputValue').textContent = inputValue;
+                        }
+                    </script>
+                </div>
+
+                <div class="content-box" id="l4-menu3">
+                    <h1>Код</h1>
+                    <pre>                        function toggleInputVisibility() {
+                        const inputElement = document.getElementById('l4_input3');
+                        const toggleButton = document.getElementById('l4_button3');
+
+                        // Перевіряємо поточний тип поля введення
+                        if (inputElement.type === 'text') {
+                            // Якщо зараз тип 'text', змінюємо його на 'password'
+                            inputElement.type = 'password';
+                            toggleButton.textContent = 'Розкрити'; // Змінюємо текст кнопки
+                        } else {
+                            // Якщо зараз тип 'password', змінюємо його на 'text'
+                            inputElement.type = 'text';
+                            toggleButton.textContent = 'Приховати'; // Змінюємо текст кнопки
+                        }
+                        }</pre>
+                    <h1>Приклад</h1>
+                    <input type="text" id="l4_input3" placeholder="Введіть щось тут">
+
+                    <button onclick="toggleInputVisibility()" id="l4_button3">Приховати</button>
+
+                    <script>
+                        function toggleInputVisibility() {
+                        const inputElement = document.getElementById('l4_input3');
+                        const toggleButton = document.getElementById('l4_button3');
+
+                        // Перевіряємо поточний тип поля введення
+                        if (inputElement.type === 'text') {
+                            // Якщо зараз тип 'text', змінюємо його на 'password'
+                            inputElement.type = 'password';
+                            toggleButton.textContent = 'Розкрити'; // Змінюємо текст кнопки
+                        } else {
+                            // Якщо зараз тип 'password', змінюємо його на 'text'
+                            inputElement.type = 'text';
+                            toggleButton.textContent = 'Приховати'; // Змінюємо текст кнопки
+                        }
+                        }
+                    </script>
+                </div>
+
+                <div class="content-box" id="l4-menu4">
+                    <h1>Код</h1>
+                    <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Звітний документ - Завдання 5&lt;/title&gt;
+&lt;style&gt;
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0e0e0;
+  }
+
+  .taskTitle {
+    background-color: #a8d5a8;
+    padding: 20px;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  #place {
+    width: 300px;
+    height: 500px;
+    background-color: #4a7d4a;
+    margin: 20px auto;
+    border: 1px solid #333;
+  }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;p class=&quot;taskTitle&quot;&gt;ЗАВДАННЯ 5&lt;/p&gt;
+
+  &lt;div id=&quot;place&quot;&gt;&lt;/div&gt;
+
+  &lt;script&gt;
+    window.addEventListener('click', function(event) {
+      const placeDiv = document.getElementById('place');
+      const isClickedInsidePlace = placeDiv.contains(event.target);
+      console.log(isClickedInsidePlace);
+    });
+  &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+                    <h1>Консоль</h1>
+                    <img src="images/lab4-task3.png"></img>
+                    <a href="lab4-task3.html">Посилання на сторінку</a>
+                </div>
+
+                <div class="content-box" id="l4-menu5">
+                    <h1>Код</h1>
+                    <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uk&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;title&gt;Завдання 6: Список категорій&lt;/title&gt;
+&lt;style&gt;
+  body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+  }
+  #categories {
+    list-style: none;
+    padding: 0;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    max-width: 400px;
+    margin: 20px auto;
+  }
+  .item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+  }
+  .item:last-child {
+    border-bottom: none;
+  }
+  .item h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  .item ul {
+    list-style: disc inside;
+    padding-left: 20px;
+    margin: 0;
+  }
+  .item li {
+    margin-bottom: 5px;
+  }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;Список категорій&lt;/h1&gt;
+
+  &lt;ul id=&quot;categories&quot;&gt;
+    &lt;li class=&quot;item&quot;&gt;
+      &lt;h2&gt;Animals&lt;/h2&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Cat&lt;/li&gt;
+        &lt;li&gt;Hamster&lt;/li&gt;
+        &lt;li&gt;Horse&lt;/li&gt;
+        &lt;li&gt;Parrot&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;item&quot;&gt;
+      &lt;h2&gt;Products&lt;/h2&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Bread&lt;/li&gt;
+        &lt;li&gt;Parsley&lt;/li&gt;
+        &lt;li&gt;Cheese&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;item&quot;&gt;
+      &lt;h2&gt;Technologies&lt;/h2&gt;
+      &lt;ul&gt;
+        &lt;li&gt;HTML&lt;/li&gt;
+        &lt;li&gt;CSS&lt;/li&gt;
+        &lt;li&gt;JavaScript&lt;/li&gt;
+        &lt;li&gt;React&lt;/li&gt;
+        &lt;li&gt;Node.js&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;script&gt;
+    const categoriesList = document.querySelector('#categories');
+    const categoryItems = categoriesList.querySelectorAll('.item');
+
+    console.log(`Number of categories: ${categoryItems.length}`);
+
+    categoryItems.forEach(item =&gt; {
+      const categoryTitle = item.querySelector('h2').textContent;
+      const categoryElementsCount = item.querySelectorAll('ul &gt; li').length;
+
+      console.log(`Category: ${categoryTitle}`);
+      console.log(`Elements: ${categoryElementsCount}`);
+    });
+  &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+                    <h1>Консоль</h1>
+                    <img src="images/lab4-task4.png"></img>
+                    <a href="lab4-task4.html">Посилання на сторінку</a>
+                </div>
+
+                <div class="content-box" id="l4-menu6">
+                    <h1>Код</h1>
+                    <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uk&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;title&gt;Зміна кольору фону&lt;/title&gt;
+&lt;style&gt;
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Робить body висотою всього вікна перегляду */
+    margin: 0;
+    transition: background-color 0.3s ease; /* Додаємо плавний перехід для кольору фону */
+    background-color: #ffffff; /* Початковий колір фону */
+  }
+
+  .widget {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .widget p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+
+  .widget .color {
+    font-weight: bold;
+    color: #4CAF50; /* Початковий колір для тексту спану */
+  }
+
+  .widget button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+  }
+
+  .widget button:hover {
+    background-color: #0056b3;
+  }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;div class=&quot;widget&quot;&gt;
+    &lt;p&gt;Background color: &lt;span class=&quot;color&quot;&gt;-&lt;/span&gt;&lt;/p&gt;
+    &lt;button type=&quot;button&quot; class=&quot;change-color&quot;&gt;Change color&lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;script&gt;
+    // Функція для генерування випадкового кольору в hex-форматі
+    function getRandomHexColor() {
+      return `#${Math.floor(Math.random() * 16777215)
+        .toString(16)
+        .padStart(6, '0')}`; // Виправлено padStart з 0 на '0'
+    }
+
+    // Отримуємо посилання на елементи DOM
+    const changeColorButton = document.querySelector('.change-color');
+    const colorSpan = document.querySelector('.color');
+    const bodyElement = document.body; // Звертаємося безпосередньо до body
+
+    // Додаємо слухач події кліку на кнопку
+    changeColorButton.addEventListener('click', function() {
+      // Генеруємо випадковий колір
+      const randomColor = getRandomHexColor();
+
+      // Змінюємо колір фону &lt;body&gt; через інлайн-стиль
+      bodyElement.style.backgroundColor = randomColor;
+
+      // Оновлюємо текстовий вміст для span.color
+      colorSpan.textContent = randomColor;
+    });
+  &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+                    <h1>Приклад</h1>
+                    <a href="lab4-task5.html">Посилання на сторінку</a>
+                </div>
+
+                <div class="content-box" id="l4-menu7">
+                    <h1>Результати лабораторної роботи</h1>
+                    <p>У цій лабораторній роботі було розглянуто основні принципи роботи з об'єктами в JavaScript, включаючи методи об'єкта та масиви об'єктів. Розглянуті техніки деструктуризації об'єктів дозволяють більш ефективно працювати з даними, зокрема для витягування лише необхідних властивостей без необхідності звертатися до всього об'єкта. Важливою частиною роботи стало застосування методів об'єктів, що дозволяють організовувати код у вигляді об'єктів, що володіють як даними, так і функціоналом.</p>
+                    <p>Крім того, велика увага була приділена використанню callback-функцій. Колбеки є важливим інструментом для асинхронного програмування та обробки результатів, які з'являються в процесі виконання програми. Стрілочні функції, як компактний та зручний спосіб оголошення функцій, використовуються для створення колбеків і сприяють написанню більш читабельного та зрозумілого коду. Використання стрілочних функцій зменшує кількість зайвих рядків коду і робить його більш лаконічним.</p>
+                    <p>Завершуючи, вивчення роботи з об'єктами, колбеками та стрілочними функціями допомагає підвищити ефективність програмування в JavaScript. Опанування цих тем дозволяє зручно маніпулювати даними, будувати асинхронні операції та отримувати більш гнучкі й потужні рішення для складних задач. Застосування цих знань у практиці відкриває нові можливості для розробки ефективних і масштабованих програм.</p>
+                </div>
+            </section>
+
+            <section class="labcontent" id="lab5">
+                <nav class="labmenu">
+                    <ul>
+                        <li onclick="toggleContent('l5-menu1', this)">
+                            Тема, мета, репозиторії</li>
+                        <li onclick="toggleContent('l5-menu2', this)">
+                            ЗАВДАННЯ №1
+                        </li>
+                        <li onclick="toggleContent('l5-menu3', this)">
+                            ЗАВДАННЯ №2
+                        </li>
+                        <li onclick="toggleContent('l5-menu4', this)">
+                            ЗАВДАННЯ №3
+                        </li>
+                        <li onclick="toggleContent('l5-menu5', this)">
+                            ЗАВДАННЯ №4
+                        </li>
+                        <li onclick="toggleContent('l5-menu6', this)">
+                            ЗАВДАННЯ №5
+                        </li>
+                        <li onclick="toggleContent('l5-menu7', this)">
+                            ВИСНОВКИ
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="content-box" id="l5-menu1">
+                    <h1>
+                        Лабораторна робота №5
+                    </h1>
+                    <h2>
+                        Тема
+                    </h2>
+                    <p>
+                        Об'єкт. Методи об'єкта. Масив об'єктів. Деструктуризація об'єктів. Callback. Стрілочні функції. Стрілочні функції як колбеки.
+                    </p>
+                    <h2>
+                        Мета
+                    </h2>
+                    <p>
+                        Придбати практичні навички роботи з об'єктами. Методи об'єкта. Callback. Стрілочні функції. Стрілочні функції як колбеки. Реалізація програм засобами мови JavaScript.
+                    </p>
+                    <h2>
+                        Посилання
+                    </h2>
+                    <h3>
+                        Власний WEB-застосунок
+                    </h3>
+                    <p>
+                        <a target="_blank" href="https://github.com/barsikfive/zpi-zp41_appWEB-AbaievaAlina-KPI-2025">Репозиторій</a><br>
+                        <a target="_blank" href="https://barsikfive.github.io/zpi-zp41_appWEB-AbaievaAlina-KPI-2025/">Жива сторінка</a>
+                    </p>
+                    <h3>
+                        Звітний HTML-документ
+                    </h3>
+                    <p>
+                        <a target="_blank" href="https://github.com/barsikfive/zpi-zp41_appRECORD-AbaievaAlina-KPI-2025">Репозиторій</a><br>
+                        <a target="_blank" href="https://barsikfive.github.io/zpi-zp41_appRECORD-AbaievaAlina-KPI-2025/">Жива сторінка</a>
+                    </p>
+                    <h3>
+                        Самостійні роботи
+                    </h3>
+                    <p>
+                        <a target="_blank" href="https://github.com/barsikfive/zpi-zp41_appINDEPENDENT-AbaievaAlina-KPI-2025">Репозиторій</a><br>
+                        <a target="_blank" href="https://barsikfive.github.io/zpi-zp41_appINDEPENDENT-AbaievaAlina-KPI-2025/">Жива сторінка</a>
+                    </p>
+                </div>
+
+                <div class="content-box" id="l5-menu2">
+                    <h1>Код</h1>
+                    <pre>function</pre>
+                    <h1>Консоль</h1>
+                    <img src="images/l3_2-task1.png"></img>
+                </div>
+
+                <div class="content-box" id="l5-menu3">
+                    <h1>Код</h1>
+                    <pre>const concerts</pre>
+                    <h1>Консоль</h1>
+                    <img src="images/l3_2-task2.png"></img>
+                </div>
+
+                <div class="content-box" id="l5-menu4">
+                    <h1>Код</h1>
+                    <pre>function</pre>
+                    <h1>Консоль</h1>
+                    <img src="images/l3_2-task3.png"></img>
+                </div>
+
+                <div class="content-box" id="l5-menu5">
+                    <h1>Код</h1>
+                    <pre>function</pre>
+                    <h1>Консоль</h1>
+                    <img src="images/l3_2-task5.png"></img>
+                </div>
+
+                <div class="content-box" id="l5-menu7">
+                    <h1>Результати лабораторної роботи</h1>
+                    <p>У цій лабораторній роботі було розглянуто основні принципи роботи з об'єктами в JavaScript, включаючи методи об'єкта та масиви об'єктів. Розглянуті техніки деструктуризації об'єктів дозволяють більш ефективно працювати з даними, зокрема для витягування лише необхідних властивостей без необхідності звертатися до всього об'єкта. Важливою частиною роботи стало застосування методів об'єктів, що дозволяють організовувати код у вигляді об'єктів, що володіють як даними, так і функціоналом.</p>
+                    <p>Крім того, велика увага була приділена використанню callback-функцій. Колбеки є важливим інструментом для асинхронного програмування та обробки результатів, які з'являються в процесі виконання програми. Стрілочні функції, як компактний та зручний спосіб оголошення функцій, використовуються для створення колбеків і сприяють написанню більш читабельного та зрозумілого коду. Використання стрілочних функцій зменшує кількість зайвих рядків коду і робить його більш лаконічним.</p>
+                    <p>Завершуючи, вивчення роботи з об'єктами, колбеками та стрілочними функціями допомагає підвищити ефективність програмування в JavaScript. Опанування цих тем дозволяє зручно маніпулювати даними, будувати асинхронні операції та отримувати більш гнучкі й потужні рішення для складних задач. Застосування цих знань у практиці відкриває нові можливості для розробки ефективних і масштабованих програм.</p>
+                </div>
+            </section>
+
+            <section class="labcontent" id="lab6">
+                <nav class="labmenu">
+                    <ul>
+                        <li onclick="toggleContent('l6-menu1', this)">
+                            Тема, мета, репозиторії</li>
+                        <li onclick="toggleContent('l6-menu2', this)">
+                            ЗАВДАННЯ №1
+                        </li>
+                        <li onclick="toggleContent('l6-menu3', this)">
+                            ЗАВДАННЯ №2
+                        </li>
+                        <li onclick="toggleContent('l6-menu4', this)">
+                            ЗАВДАННЯ №3
+                        </li>
+                        <li onclick="toggleContent('l6-menu5', this)">
+                            ЗАВДАННЯ №4
+                        </li>
+                        <li onclick="toggleContent('l6-menu6', this)">
+                            ЗАВДАННЯ №5
+                        </li>
+                        <li onclick="toggleContent('l6-menu7', this)">
+                            ВИСНОВКИ
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="content-box" id="l6-menu1">
+                    <h1>
+                        Лабораторна робота №3.2
+                    </h1>
+                    <h2>
+                        Тема
+                    </h2>
+                    <p>
+                        Об'єкт. Методи об'єкта. Масив об'єктів. Деструктуризація об'єктів. Callback. Стрілочні функції. Стрілочні функції як колбеки.
+                    </p>
+                    <h2>
+                        Мета
+                    </h2>
+                    <p>
+                        Придбати практичні навички роботи з об'єктами. Методи об'єкта. Callback. Стрілочні функції. Стрілочні функції як колбеки. Реалізація програм засобами мови JavaScript.
+                    </p>
+                    <h2>
+                        Посилання
+                    </h2>
+                    <h3>
+                        Власний WEB-застосунок
+                    </h3>
+                    <p>
+                        <a target="_blank" href="https://github.com/barsikfive/zpi-zp41_appWEB-AbaievaAlina-KPI-2025">Репозиторій</a><br>
+                        <a target="_blank" href="https://barsikfive.github.io/zpi-zp41_appWEB-AbaievaAlina-KPI-2025/">Жива сторінка</a>
+                    </p>
+                    <h3>
+                        Звітний HTML-документ
+                    </h3>
+                    <p>
+                        <a target="_blank" href="https://github.com/barsikfive/zpi-zp41_appRECORD-AbaievaAlina-KPI-2025">Репозиторій</a><br>
+                        <a target="_blank" href="https://barsikfive.github.io/zpi-zp41_appRECORD-AbaievaAlina-KPI-2025/">Жива сторінка</a>
+                    </p>
+                    <h3>
+                        Самостійні роботи
+                    </h3>
+                    <p>
+                        <a target="_blank" href="https://github.com/barsikfive/zpi-zp41_appINDEPENDENT-AbaievaAlina-KPI-2025">Репозиторій</a><br>
+                        <a target="_blank" href="https://barsikfive.github.io/zpi-zp41_appINDEPENDENT-AbaievaAlina-KPI-2025/">Жива сторінка</a>
+                    </p>
+                </div>
+
+                <div class="content-box" id="l6-menu2">
+                    <h1>Код</h1>
+                    <pre>function</pre>
+                    <h1>Консоль</h1>
+                    <img src="images/l3_2-task1.png"></img>
+                </div>
+
+                <div class="content-box" id="l6-menu3">
+                    <h1>Код</h1>
+                    <pre>const concerts</pre>
+                    <h1>Консоль</h1>
+                    <img src="images/l3_2-task2.png"></img>
+                </div>
+
+                <div class="content-box" id="l6-menu4">
+                    <h1>Код</h1>
+                    <pre>function</pre>
+                    <h1>Консоль</h1>
+                    <img src="images/l3_2-task3.png"></img>
+                </div>
+
+                <div class="content-box" id="l6-menu5">
+                    <h1>Код</h1>
+                    <pre>function</pre>
+                    <h1>Консоль</h1>
+                    <img src="images/l3_2-task5.png"></img>
+                </div>
+
+                <div class="content-box" id="l6-menu7">
                     <h1>Результати лабораторної роботи</h1>
                     <p>У цій лабораторній роботі було розглянуто основні принципи роботи з об'єктами в JavaScript, включаючи методи об'єкта та масиви об'єктів. Розглянуті техніки деструктуризації об'єктів дозволяють більш ефективно працювати з даними, зокрема для витягування лише необхідних властивостей без необхідності звертатися до всього об'єкта. Важливою частиною роботи стало застосування методів об'єктів, що дозволяють організовувати код у вигляді об'єктів, що володіють як даними, так і функціоналом.</p>
                     <p>Крім того, велика увага була приділена використанню callback-функцій. Колбеки є важливим інструментом для асинхронного програмування та обробки результатів, які з'являються в процесі виконання програми. Стрілочні функції, як компактний та зручний спосіб оголошення функцій, використовуються для створення колбеків і сприяють написанню більш читабельного та зрозумілого коду. Використання стрілочних функцій зменшує кількість зайвих рядків коду і робить його більш лаконічним.</p>

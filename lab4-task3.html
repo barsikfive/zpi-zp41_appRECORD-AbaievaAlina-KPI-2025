@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Звітний документ - Завдання 5</title>
+<style>
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0e0e0;
+  }
+
+  .taskTitle {
+    background-color: #a8d5a8;
+    padding: 20px;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  #place {
+    width: 300px;
+    height: 500px;
+    background-color: #4a7d4a;
+    margin: 20px auto;
+    border: 1px solid #333;
+  }
+</style>
+</head>
+<body>
+
+  <p class="taskTitle">ЗАВДАННЯ 5</p>
+
+  <div id="place"></div>
+
+  <script>
+    window.addEventListener('click', function(event) {
+      const placeDiv = document.getElementById('place');
+      const isClickedInsidePlace = placeDiv.contains(event.target);
+      console.log(isClickedInsidePlace);
+    });
+  </script>
+
+</body>
+</html>

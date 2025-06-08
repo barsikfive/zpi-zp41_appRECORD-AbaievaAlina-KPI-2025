@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Зміна кольору фону</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Робить body висотою всього вікна перегляду */
+    margin: 0;
+    transition: background-color 0.3s ease; /* Додаємо плавний перехід для кольору фону */
+    background-color: #ffffff; /* Початковий колір фону */
+  }
+
+  .widget {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .widget p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+
+  .widget .color {
+    font-weight: bold;
+    color: #4CAF50; /* Початковий колір для тексту спану */
+  }
+
+  .widget button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+  }
+
+  .widget button:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+
+  <div class="widget">
+    <p>Background color: <span class="color">-</span></p>
+    <button type="button" class="change-color">Change color</button>
+  </div>
+
+  <script>
+    // Функція для генерування випадкового кольору в hex-форматі
+    function getRandomHexColor() {
+      return `#${Math.floor(Math.random() * 16777215)
+        .toString(16)
+        .padStart(6, '0')}`; // Виправлено padStart з 0 на '0'
+    }
+
+    // Отримуємо посилання на елементи DOM
+    const changeColorButton = document.querySelector('.change-color');
+    const colorSpan = document.querySelector('.color');
+    const bodyElement = document.body; // Звертаємося безпосередньо до body
+
+    // Додаємо слухач події кліку на кнопку
+    changeColorButton.addEventListener('click', function() {
+      // Генеруємо випадковий колір
+      const randomColor = getRandomHexColor();
+
+      // Змінюємо колір фону <body> через інлайн-стиль
+      bodyElement.style.backgroundColor = randomColor;
+
+      // Оновлюємо текстовий вміст для span.color
+      colorSpan.textContent = randomColor;
+    });
+  </script>
+
+</body>
+</html>
